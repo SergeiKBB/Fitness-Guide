@@ -1,0 +1,19 @@
+.burger {
+    display: none;
+    @include before-after($fa-var-bars);
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    z-index: 10;
+    
+    color: rgba($color-gray, 0.8);
+    font-size: rem(26);
+
+    &:hover {
+        color: $default-color;
+    }
+
+    &:active {
+        color: rgba($color-gray, 0.3);
+    }
+}

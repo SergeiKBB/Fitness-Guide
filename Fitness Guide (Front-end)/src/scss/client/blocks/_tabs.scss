@@ -1,0 +1,26 @@
+.tabs {
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        padding: 0 20px;
+        border: 1px solid $color-gray; 
+        border-left: none;
+        
+        &:first-child {
+            border-left: 1px solid $color-gray;
+        }
+
+        &:last-child {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $color-gray;
+        }
+
+        &_active {
+            border-bottom: none;
+        }
+    }
+}

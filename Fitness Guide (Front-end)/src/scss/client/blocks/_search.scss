@@ -1,0 +1,44 @@
+.search {
+    margin-bottom: 10px;
+    &__form {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        line-height: 0;
+    }
+    &__input {
+        width: 100%;
+        padding: 5px 0 3px 0;
+        border: none;
+        border-bottom: 2px solid $color-blue;
+        outline: none;
+        line-height: 0;
+        background-color: transparent;
+        &::placeholder {
+            color: $color-btn-blue;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        border: none;
+        border-radius: 0 50% 0 0;
+        background-color: $color-btn-blue;
+    }
+
+    &__submit {
+            @include before-after($fa-var-search);
+            &:before {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+                color: $color-white;
+                font-size: rem(20);
+            }
+    }
+}

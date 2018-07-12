@@ -1,0 +1,158 @@
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.site-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 20;
+    transform: translate(-50%,-50%);
+    padding: 0;
+    &__item {
+        position: relative;
+        display: flex;
+        &::after {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 100%;
+            background-color: rgba($color-gray, 0.8);
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+        &:hover {
+            &>.site-nav__link {
+                color: $default-color;
+            }
+            background-color: $color-steelBlue;
+        }
+        &:active {
+            background-color: rgba($color-blue, 0.9);
+        }
+        &:first-child:hover>.site-subnav__list {
+            display: block;
+        }
+    }
+    &__link {
+        padding: 5px 20px;
+        color: rgba($color-gray, 0.8);
+        font-family: $default-font-bold;
+        font-size: rem(20);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.site-subnav {
+    &__list {
+        position: absolute;
+        display: none;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        transform: translate(0, 100%);
+        padding: 0;
+        background-color: rgba($color-blue, 0.7);
+        & .running {
+            &:hover {
+                background-color: $color-running;
+            }
+            &:active {
+                background-color: rgba($color-running, 0.7);
+            }
+        }
+        & .swimming {
+            &:hover {
+                background-color: $color-swimming;
+            }
+            &:active {
+                background-color: rgba($color-swimming, 0.7);
+            }
+        }
+        & .crossfit {
+            &:hover {
+                background-color: $color-crossfit;
+            }
+            &:active {
+                background-color: rgba($color-crossfit, 0.7);
+            }
+        }
+        & .fitness {
+            &:hover {
+                background-color: $color-fitness;
+            }
+            &:active {
+                background-color: rgba($color-fitness, 0.7);
+            }
+        }
+        & .mma {
+            &:hover {
+                background-color: $color-mma;
+            }
+            &:active {
+                background-color: rgba($color-mma, 0.7);
+            }
+        }
+    }
+    &__item {
+        padding: 5px 0 5px 20px;
+    }
+    &__link {
+        color: $color-white;
+        font-size: rem(18);
+    }
+}
+
+.user-nav {
+    display: flex;
+    justify-content: flex-end;
+    &__link {
+        display: flex;
+        margin: 0;
+        margin-left: 15px;
+        align-items: center;
+        justify-content: center;
+        &:hover>.user-nav__icon,
+        &:hover>.user-nav__text {
+            color: $default-color;
+        }
+        &:active>.user-nav__icon,
+        &:active>.user-nav__text {
+            color: rgba($color-gray, 0.3);
+        }
+    }
+    &__icon {
+        color: rgba($color-gray, 0.8);
+    }
+    &__text {
+        margin-left: 5px;
+        color: rgba($color-gray, 0.8);
+        font-size: rem(18);
+        font-family: $default-font-bold;
+        background-color: transparent;
+    }
+}
+
+.icon-add {
+    @include before-after($fa-var-plus);
+    &:before {
+        position: static;
+    }
+}
+
+.icon-login {
+    @include before-after($fa-var-user);
+    &:before {
+        position: static;
+    }
+}

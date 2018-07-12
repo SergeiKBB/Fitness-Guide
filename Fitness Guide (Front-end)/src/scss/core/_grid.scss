@@ -1,0 +1,142 @@
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+//--------------Laptop START--------
+.col-l-1 {
+    @include widthColumn(1);
+}
+
+.col-l-2 {
+    @include widthColumn(2);
+}
+
+.col-l-3 {
+    @include widthColumn(3);
+}
+
+.col-l-4 {
+    @include widthColumn(4);
+}
+
+.col-l-5 {
+    @include widthColumn(5);
+}
+
+.col-l-6 {
+    @include widthColumn(6);
+}
+
+.col-l-7 {
+    @include widthColumn(7);
+}
+
+.col-l-8 {
+    @include widthColumn(8);
+}
+
+.col-l-9 {
+    @include widthColumn(9);
+}
+
+.col-l-10 {
+    @include widthColumn(10);
+}
+
+.col-l-11 {
+    @include widthColumn(11);
+}
+
+.col-l-12 {
+    @include widthColumn(12);
+}
+//---------Laptop END-------
+
+//--------Tablet START------
+@media (max-width: 768px) {
+    .col-t-1 {
+        @include widthColumn(1);
+    }
+    .col-t-2 {
+        @include widthColumn(2);
+    }
+    .col-t-3 {
+        @include widthColumn(3);
+    }
+    .col-t-4 {
+        @include widthColumn(4);
+    }
+    .col-t-5 {
+        @include widthColumn(5);
+    }
+    .col-t-6 {
+        @include widthColumn(6);
+    }
+    .col-t-7 {
+        @include widthColumn(7);
+    }
+    .col-t-8 {
+        @include widthColumn(8);
+    }
+    .col-t-9 {
+        @include widthColumn(9);
+    }
+    .col-t-10 {
+        @include widthColumn(10);
+    }
+    .col-t-11 {
+        @include widthColumn(11);
+    }
+    .col-t-12 {
+        @include widthColumn(12);
+    }
+}
+
+//--------Tablet END--------
+//--------Mobile START-------
+@media (max-width: 425px) {
+    .col-m-1 {
+        @include widthColumn(1);
+    }
+    .col-m-2 {
+        @include widthColumn(2);
+    }
+    .col-m-3 {
+        @include widthColumn(3);
+    }
+    .col-m-4 {
+        @include widthColumn(4);
+    }
+    .col-m-5 {
+        @include widthColumn(5);
+    }
+    .col-m-6 {
+        @include widthColumn(6);
+    }
+    .col-m-7 {
+        @include widthColumn(7);
+    }
+    .col-m-8 {
+        @include widthColumn(8);
+    }
+    .col-m-9 {
+        @include widthColumn(9);
+    }
+    .col-m-10 {
+        @include widthColumn(10);
+    }
+    .col-m-11 {
+        @include widthColumn(11);
+    }
+    .col-m-12 {
+        @include widthColumn(12);
+    }
+}

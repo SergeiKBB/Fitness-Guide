@@ -1,0 +1,32 @@
+@mixin font-face($name,$file,$weight:normal,$style:normal) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url('../fonts/#{$file}/#{$file}.eot');
+        src: url('../fonts/#{$file}/#{$file}.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/#{$file}/#{$file}.woff') format('woff'),
+            url('../fonts/#{$file}/#{$file}.ttf') format('truetype'),
+            url('../fonts/#{$file}/#{$file}.svg?#webfont') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@mixin widthColumn($numberOfColumn) {
+    width: calc(100%*#{$numberOfColumn}/12);
+}
+
+@function rem($px) {
+    @return #{$px/16}rem;
+}
+
+@mixin before-after($content) {
+    position: relative;
+    &:before {
+        content: fa-content($content);
+        position: absolute;
+        display: block;
+
+        font-family: fontawesome;
+    }
+    
+}

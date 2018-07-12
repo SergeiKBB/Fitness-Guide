@@ -1,0 +1,27 @@
+.main-settings {
+    flex-grow: 1;
+}
+
+.settings {
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 20px 30px;
+    border: 1px solid $color-gray;
+    border-top-color: transparent;
+
+
+    &_active {
+        display: flex;
+    }
+}
+
+.article {
+    &__header {
+        width: 100%;
+    }
+}
+
+
+.settings_active {
+    display: flex;
+}

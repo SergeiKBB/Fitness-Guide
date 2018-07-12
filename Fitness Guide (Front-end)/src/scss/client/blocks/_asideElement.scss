@@ -1,0 +1,68 @@
+.aside {
+    &__element {
+        border-radius: 5px 5px 0 0;
+        border: 2px solid rgba($default-color,.125);
+    }
+    &__title {
+        width: 100%;
+        margin: 0;
+        padding: rem(12) rem(20);
+        border-bottom: 1px solid rgba($default-color,.125);
+        border-radius: 5px 5px 0 0;
+        
+        font-size: rem(20);
+        background-color: rgba($default-color,.03);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        padding: 3px 0;
+        padding-left: 20px;
+        border-bottom: 2px solid rgba($default-color,.125);
+
+        &:last-child {
+            border: none;
+        }
+
+        
+    }
+
+    &__link {
+        font-family: $default-font-bold;     
+        color: $color-blue;
+        
+        &-running {
+            color: $color-running;
+        }
+
+        &-swimming {
+            color: $color-swimming;
+        }
+
+        &-crossfit {
+            color: $color-crossfit;
+        }   
+
+        &-fitness {
+            color: $color-fitness;
+        }
+
+        &-mma {
+            color: $color-mma;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    font-family: $default-font;
+    font-size: rem(16);
+    color: $default-color;
+    line-height: rem(26);
+
+    background-color: $color-white;
+}
+
+a {
+    text-decoration: none;
+    color: $default-color;
+}
+
+
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.none {
+    display: none!important;
+}

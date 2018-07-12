@@ -1,0 +1,47 @@
+.btn {
+    height: 50px;
+    margin: 0;    
+    border: none;
+    padding: 0;
+
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.tab {
+    &__btn {
+        width: 50%;
+
+        font-size: rem(20);
+        color: rgba($color-white, 0.7);
+        font-family: $default-font-bold;
+        background-color: $color-btn-blue;
+        &-active {
+            color: $color-white;
+            background-color: $color-blueGreen-light;
+        }
+    }
+    
+    &__btn_login, &__btn_signup {
+        width: 100%;
+        margin-top: 10px;
+
+        color: $color-white;
+        font-size: rem(36);
+        font-family: $default-font-bold;
+        background-color: $color-blueGreen-light;
+    }
+}
+
+.aside__btn {
+    display: none;
+    @include before-after($fa-var-caret-left);
+    position: fixed;
+    right: 20px;
+    top: 45%;
+    z-index: 30;
+    font-size: rem(50);
+    color: $color-blue;
+    
+}

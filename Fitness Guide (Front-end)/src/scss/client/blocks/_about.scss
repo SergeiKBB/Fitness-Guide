@@ -1,0 +1,46 @@
+.about {
+    flex-grow: 1;
+
+    
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__line {
+        height: 2px;
+        margin: 50px 0;
+        background-color: $color-gray;
+        border: none;
+    }
+
+    &__text {
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding: 0 15px;
+    }
+
+}
+
+.person {
+    text-align: center;
+
+    &__img {
+        width: 50%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    &__text {
+        text-align: justify;
+    }
+}
+

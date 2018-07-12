@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness Guide</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="row top-wrapper">
+            <a href="index.html" class="logo__link col-l-2">
+                <img src="img/logo.png" class="logo__img" alt="">FitnessGuide</a>
+            <nav class="main-nav col-l-10 col-t-3 col-m-4">
+                <ul class="site-nav">
+                    <li class="site-nav__item">
+                        <a href="#" class="site-nav__link">Home</a>
+                        <ul class="site-subnav__list">
+                            <li class="site-subnav__item running">
+                                <a href="" class="site-subnav__link">Running</a>
+                            </li>
+                            <li class="site-subnav__item swimming">
+                                <a href="" class="site-subnav__link ">Swimming</a>
+                            </li>
+                            <li class="site-subnav__item crossfit">
+                                <a href="" class="site-subnav__link ">Crossfit</a>
+                            </li>
+                            <li class="site-subnav__item fitness">
+                                <a href="" class="site-subnav__link ">Fitness</a>
+                            </li>
+                            <li class="site-subnav__item mma">
+                                <a href="" class="site-subnav__link ">MMA</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="contactUs.html" class="site-nav__link">Contact</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="about.html" class="site-nav__link">About</a>
+                    </li>
+                </ul>
+                <div class="user-nav">
+                    <a href="#" class="user-nav__link" id="login">
+                        <span class="user-nav__icon icon-login"></span>
+                        <span class="user-nav__text">Login</span>
+                    </a>
+
+                </div>
+            </nav>
+            <span class="burger"></span>
+
+
+        </div>
+    </header>
+    <main class="contact">
+        <div class="container">
+            <h1 class="contact__title">Contsct us</h1>
+            <section class="address col-l-8 col-t-12">
+                <h2 class="address__title">FitnessGuide</h2>
+                <p class="address__text">
+                    109 Hollywood Avenue
+                    <br> Birmingham
+                    <br> B35 4HE
+                </p>
+                <p class="address__text">
+                    <a href="tel:+380960000000" class="address__mob">Mob:
+                        <span class="phone">+380960000000</span>
+                    </a>
+                    <br>
+                    <a href="email:s.homich@gmail.com" class="address__email">Email:
+                        <span class="email">s.homich@gmail.com</span>
+                    </a>
+                </p>
+            </section>
+            <section class="map col-l-8 col-t-12">
+                <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.890913120981!2d-74.5056807845304!3d40.52190217935304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c0cdbe78b305%3A0xf96807d058275cad!2zMTA5IEhvbGx5d29vZCBBdmUgQjM1LCBTb21lcnNldCwgTkogMDg4NzMsINCh0KjQkA!5e0!3m2!1sru!2sua!4v1530636642166"
+                    width="800" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="contact-us">Contact us:
+                    <a href="tel:+380960000000" class="contact-us__phone">+380960000000</a>
+                </div>
+                <div class="copyright">&copy; 2018 FitnessGuide. Inc. All right reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-wrap">
+        <div class="modal modal__login col-l-4 col-t-6 col-m-11">
+            <button class="modal__close"></button>
+            <div class="tab__group">
+                <button class="tab__btn btn tab__btn-active" id="tabLoginBtn">Log in</button>
+                <button class="tab__btn btn" id="tabSignupBtn">Sign up</button>
+            </div>
+            <div class="tab__content">
+                <div class="tab__login tab-active" id="tabLoginContent">
+                    <form action="" method="POST" class="tab__form" id="loginForm">
+                        <div class="tab__input-wrap">
+                            <input type="email" id="email" class="tab__input" name="email" placeholder="Email Address">
+                            <label for="email" class="tab__label">Email address</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="password" id="password" class="tab__input" name="password" placeholder="Password">
+                            <label for="password" class="tab__label">Password</label>
+                        </div>
+                        <a href="" class="tab__link">Forgot Password?</a>
+                        <button class="btn tab__btn_login" id="loginSubmit" type="submit">Log in</button>
+                    </form>
+                </div>
+                <div class="tab__signup" id="tabSignupContent">
+                    <form action="" method="POST" class="tab__form" id="signupForm">
+                        <div class="tab__input-wrap">
+                            <input type="text" id="first-name" class="tab__input" name="firstName" placeholder="First Name">
+                            <label for="first-name" class="tab__label">First Name</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="text" id="last-name" class="tab__input" name="lastName" placeholder="Last Name">
+                            <label for="last-name" class="tab__label">Last Name</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="email" id="email" class="tab__input" name="email" placeholder="Email Address">
+                            <label for="email" class="tab__label">Email Address</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="password" id="password" class="tab__input" name="password" placeholder="Set A Password">
+                            <label for="password" class="tab__label">Set A Password</label>
+                        </div>
+                        <button class="btn tab__btn_signup" id="signupSubmit" type="submit">Get started</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

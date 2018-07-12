@@ -1,0 +1,7 @@
+@import "_mixins";
+
+@include font-face("PT Sans","PTSans");
+@include font-face("PT SansBold","PTSansBold", bold);
+
+@include font-face("Tangerine","Tangerine");
+@include font-face("Tangerine Bold","TangerineBold", bold);

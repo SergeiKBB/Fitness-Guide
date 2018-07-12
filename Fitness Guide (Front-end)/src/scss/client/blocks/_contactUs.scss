@@ -1,0 +1,45 @@
+.contact {
+    flex-grow: 1;
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.address {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    &__title {
+        width: 100%;
+        margin: 0;
+    }
+    &__text {
+        width: 30%;
+    }
+
+    &__map {
+        @include before-after($fa-var-map-marked);
+    }
+}
+
+.map {
+    margin: 0 auto;
+
+    &-iframe {
+        width: 100%;
+    }
+}
+
+.phone, .email {
+    text-decoration: underline;
+}
+
+.phone:hover, .email:hover {
+    text-decoration: none;
+}
+
+.phone:active, .email:active {
+    opacity: 0.2;
+}

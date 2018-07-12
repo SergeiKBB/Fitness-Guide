@@ -1,0 +1,110 @@
+
+.modal{
+    position: relative;
+    &__login{
+        @media all and (max-width: 1024px) and (min-width: 769px) {
+            width: 40%;
+        }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 3% 4%;
+
+        background-color: $color-white;
+    }
+    &__close {
+        @include before-after($fa-var-times);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 0;
+        border: none;
+
+        background-color: transparent;
+        cursor: pointer;
+        &::before {
+            position: static;
+            color: rgba($color-gray, 0.3);
+            font-size: rem(28);
+        }
+    }
+
+    &-wrap {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100%; 
+        background-color: rgba($default-color, 0.3);
+    }
+}
+
+.tab {
+    &__group {
+        width: 100%;
+        font-size: 0;
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        opacity: 0;
+        font-size: rem(15);
+        color: rgba($color-gray, 0.6);
+        transition: 1s;
+    }
+
+    &__input {
+        width: 100%;
+        margin-top: 25px;
+        border: none;
+        border-bottom: 2px solid $color-blue;
+        padding: 10px 0 3px 6px;
+        outline: none;
+        font-size: rem(18);
+        &::placeholder {
+            color: rgba($color-gray, 0.5);
+        }
+    }
+    
+    &__link {
+        float: right;
+        color: $color-blueGreen-light;
+
+        font-size: rem(14);
+        font-family: $default-font-bold;
+        text-decoration: underline;
+    }
+    
+    &__signup,
+    &__login {
+        display: none;
+    }
+
+    &-active {
+        display: block;
+    }
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.signup-message {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 25px 50px;
+
+    transform: translate(-50%,0);
+    transition: 2s;
+    font-size: rem(24);
+    background-color: $color-green;
+}

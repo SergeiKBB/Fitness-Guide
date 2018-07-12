@@ -1,0 +1,40 @@
+
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@import "../fonts/fontawesome/fontawesome";
+
+@import "core/_vars";
+@import "core/_mixins";
+@import "core/_fonts";
+@import "core/_grid";
+@import "core/_base";
+@import "core/_buttons";
+@import "core/_icons";
+@import "core/_normalize";
+
+@import "client/blocks/_catalogItem";
+@import "client/blocks/_article";
+@import "client/blocks/_asideElement";
+@import "client/blocks/_navMain";
+@import "client/blocks/_pagination";
+@import "client/blocks/_slider";
+@import "client/blocks/_search";
+@import "client/blocks/_tabs";
+@import "client/blocks/_articleForm";
+@import "client/blocks/_managementOfArticles";
+@import "client/blocks/_contactUs";
+@import "client/blocks/_about";
+@import "client/blocks/_burger";
+
+@import "client/layout/_header";
+@import "client/layout/_content";
+@import "client/layout/_aside";
+@import "client/layout/_loginForm";
+@import "client/layout/_footer";
+@import "client/layout/_settings";
+
+
+@import "client/responsive/_responsive-index";
+@import "client/responsive/_responsive-about";
+@import "client/responsive/_responsive-article";
+@import "client/responsive/_responsive-createArticle";
+

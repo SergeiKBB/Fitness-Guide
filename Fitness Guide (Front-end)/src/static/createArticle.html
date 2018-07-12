@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness Guide</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="row top-wrapper">
+            <a href="index.html" class="logo__link col-l-2">
+                <img src="img/logo.png" class="logo__img" alt="">FitnessGuide</a>
+            <nav class="main-nav col-l-10 col-t-3 col-m-4">
+                <ul class="site-nav">
+                    <li class="site-nav__item">
+                        <a href="#" class="site-nav__link">Home</a>
+                        <ul class="site-subnav__list">
+                            <li class="site-subnav__item running">
+                                <a href="" class="site-subnav__link">Running</a>
+                            </li>
+                            <li class="site-subnav__item swimming">
+                                <a href="" class="site-subnav__link ">Swimming</a>
+                            </li>
+                            <li class="site-subnav__item crossfit">
+                                <a href="" class="site-subnav__link ">Crossfit</a>
+                            </li>
+                            <li class="site-subnav__item fitness">
+                                <a href="" class="site-subnav__link ">Fitness</a>
+                            </li>
+                            <li class="site-subnav__item mma">
+                                <a href="" class="site-subnav__link ">MMA</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="contactUs.html" class="site-nav__link">Contact</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="about.html" class="site-nav__link">About</a>
+                    </li>
+                </ul>
+                <div class="user-nav">
+                    <a href="#" class="user-nav__link" id="login">
+                        <span class="user-nav__icon icon-login"></span>
+                        <span class="user-nav__text">Login</span>
+                    </a>
+
+                </div>
+            </nav>
+            <span class="burger"></span>
+
+
+        </div>
+    </header>
+
+    <main class="main-settings">
+        <div class="container wrap">
+            <header class="article__header tabs">
+                <ul class="tabs__list">
+                    <li class="tabs__item tabs__item_active">
+                        <button class="tabs__btn btn btn-create">Create article</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__btn btn btn-management">Management of articles</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__btn btn btn-edit">Edit article</button>
+                    </li>
+                    <li class="tabs__item"></li>
+                </ul>
+            </header>
+
+            <div class="settings">
+                <section class="create-article">
+                    <form action="" class="form settings_active" id="create-article__form">
+                        <div class="form__item">
+                            <label for="title" class="form__label col-l-2 col-m-4">Title:</label>
+                            <input type="text" class="form__input col-l-3 col-m-9" name="title" id="title" placeholder="Title">
+                        </div>
+                        <div class="form__item">
+                            <label for="category" class="form__label col-l-2 col-m-4">Category:</label>
+                            <select class="form__select col-l-6 col-m-10" name="category" id="category">
+                                <option value="Running">Running</option>
+                                <option value="Swimming">Swimming</option>
+                            </select>
+                        </div>
+                        <div class="form__item">
+                            <label for="img" class="form__label col-l-2  col-m-6">Upload img:</label>
+                            <div class="img__wrap col-l-3 col-m-10">
+                                <input type="file" id="img-input" accept="image/*" name="file" class="form__input-img">
+                                <img src="img/img_default.jpg" alt="" class="form__img img_default" width="100" height="100" id="img">
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label for="text" class="form__label col-l-2 col-m-8">Text your article:</label>
+                            <textarea name="text" id="" cols="30" rows="10" class="form__text col-l-6 col-m-12" id="text"></textarea>
+                        </div>
+                        <div class="col-l-8 col-m-11 form__submit-wrap">
+                            <button class="btn form__submit">Create</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="management-articles management">
+                    <ul class="management__list" id="management__list">
+                        <div class="management__item-wrap col-l-3 col-t-6 col-m-12">
+                            <li class="management__item ">
+                                <h2 class="management__title">How to run around the park in the morning</h2>
+                                <div class="secondary management__secondary">
+                                    <span class="secondary__views">10</span>
+                                    <time class="secondary__date" pubdate datetime="2018-06-29">29 Червня</time>
+                                </div>
+                                <div class="btn__wrap">
+                                    <a class="btn btn__edit">Edit</a>
+                                    <a class="btn btn__remove">Remove</a>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="management__item-wrap col-l-3 col-t-6 col-m-12">
+                            <li class="management__item ">
+                                <h2 class="management__title">How to run around the park in the morning</h2>
+                                <div class="secondary management__secondary">
+                                    <span class="secondary__views">10</span>
+                                    <time class="secondary__date" pubdate datetime="2018-06-29">29 Червня</time>
+                                </div>
+                                <div class="btn__wrap">
+                                    <a class="btn btn__edit">Edit</a>
+                                    <a class="btn btn__remove">Remove</a>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="management__item-wrap col-l-3 col-t-6 col-m-12">
+                            <li class="management__item ">
+                                <h2 class="management__title">How to run around the park in the morning</h2>
+                                <div class="secondary management__secondary">
+                                    <span class="secondary__views">10</span>
+                                    <time class="secondary__date" pubdate datetime="2018-06-29">29 Червня</time>
+                                </div>
+                                <div class="btn__wrap">
+                                    <a class="btn btn__edit">Edit</a>
+                                    <a class="btn btn__remove">Remove</a>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="management__item-wrap col-l-3 col-t-6 col-m-12">
+                            <li class="management__item ">
+                                <h2 class="management__title">How to run around the park in the morning</h2>
+                                <div class="secondary management__secondary">
+                                    <span class="secondary__views">10</span>
+                                    <time class="secondary__date" pubdate datetime="2018-06-29">29 Червня</time>
+                                </div>
+                                <div class="btn__wrap">
+                                    <a class="btn btn__edit">Edit</a>
+                                    <a class="btn btn__remove">Remove</a>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="management__item-wrap col-l-3 col-t-6 col-m-12">
+                            <li class="management__item ">
+                                <h2 class="management__title">How to run around the park in the morning</h2>
+                                <div class="secondary management__secondary">
+                                    <span class="secondary__views">10</span>
+                                    <time class="secondary__date" pubdate datetime="2018-06-29">29 Червня</time>
+                                </div>
+                                <div class="btn__wrap">
+                                    <a class="btn btn__edit">Edit</a>
+                                    <a class="btn btn__remove">Remove</a>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="management__item-wrap col-l-3 col-t-6 col-m-12">
+                            <li class="management__item ">
+                                <h2 class="management__title">How to run around the park in the morning</h2>
+                                <div class="secondary management__secondary">
+                                    <span class="secondary__views">10</span>
+                                    <time class="secondary__date" pubdate datetime="2018-06-29">29 Червня</time>
+                                </div>
+                                <div class="btn__wrap">
+                                    <a class="btn btn__edit">Edit</a>
+                                    <a class="btn btn__remove">Remove</a>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+
+                </section>
+                <section class="edit-article">
+                    <form action="" class="form" id="edit-article__form">
+                        <div class="form__item">
+                            <label for="title" class="form__label col-l-2 col-m-4">Title:</label>
+                            <input type="text" class="form__input col-l-3 col-m-9" name="title" id="title" placeholder="Title">
+                        </div>
+                        <div class="form__item">
+                            <label for="category" class="form__label col-l-2 col-m-4">Category:</label>
+                            <select class="form__select col-l-6 col-m-10" name="category" id="category">
+                                <option value="Running">Running</option>
+                                <option value="Swimming">Swimming</option>
+                            </select>
+                        </div>
+                        <div class="form__item">
+                            <label for="img" class="form__label col-l-2  col-m-6">Upload img:</label>
+                            <div class="img__wrap col-l-3 col-m-10">
+                                <input type="file" id="img-input" accept="image/*" name="file" class="form__input-img">
+                                <img src="img/img_default.jpg" alt="" class="form__img img_default" width="100" height="100" id="img">
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label for="text" class="form__label col-l-2 col-m-8">Text your article:</label>
+                            <textarea name="text" id="" cols="30" rows="10" class="form__text col-l-6 col-m-12" id="text"></textarea>
+                        </div>
+                        <div class="col-l-8 col-m-11 form__submit-wrap">
+                            <button class="btn form__submit">Edit</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="contact-us">Contact us:
+                    <a href="tel:+380960000000" class="contact-us__phone">+380960000000</a>
+                </div>
+                <div class="copyright">&copy; 2018 FitnessGuide. Inc. All right reserved.</div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal-wrap">
+        <div class="modal modal__login col-l-4 col-t-6 col-m-11">
+            <button class="modal__close"></button>
+            <div class="tab__group">
+                <button class="tab__btn btn tab__btn-active" id="tabLoginBtn">Log in</button>
+                <button class="tab__btn btn" id="tabSignupBtn">Sign up</button>
+            </div>
+            <div class="tab__content">
+                <div class="tab__login tab-active" id="tabLoginContent">
+                    <form action="" method="POST" class="tab__form" id="loginForm">
+                        <div class="tab__input-wrap">
+                            <input type="email" id="email" class="tab__input" name="email" placeholder="Email Address">
+                            <label for="email" class="tab__label">Email address</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="password" id="password" class="tab__input" name="password" placeholder="Password">
+                            <label for="password" class="tab__label">Password</label>
+                        </div>
+                        <a href="" class="tab__link">Forgot Password?</a>
+                        <button class="btn tab__btn_login" id="loginSubmit" type="submit">Log in</button>
+                    </form>
+                </div>
+                <div class="tab__signup" id="tabSignupContent">
+                    <form action="" method="POST" class="tab__form" id="signupForm">
+                        <div class="tab__input-wrap">
+                            <input type="text" id="first-name" class="tab__input" name="firstName" placeholder="First Name">
+                            <label for="first-name" class="tab__label">First Name</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="text" id="last-name" class="tab__input" name="lastName" placeholder="Last Name">
+                            <label for="last-name" class="tab__label">Last Name</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="email" id="email" class="tab__input" name="email" placeholder="Email Address">
+                            <label for="email" class="tab__label">Email Address</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="password" id="password" class="tab__input" name="password" placeholder="Set A Password">
+                            <label for="password" class="tab__label">Set A Password</label>
+                        </div>
+                        <button class="btn tab__btn_signup" id="signupSubmit" type="submit">Get started</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+.catalog {
+    &__item {
+        display: flex;
+        position: relative;
+        height: 350px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        align-items: flex-end;
+
+        color: $color-white;
+    }
+
+    &__img {
+        position: absolute;
+        width: calc(100% - 20px);
+        height: 100%;
+        z-index: -1;
+    }
+
+    &__wrap {
+        padding: 0 20px 10px;
+        background-color: rgba($color-gray, 0.6);
+    }
+
+    &__title {
+        display: inline-block;
+        width: 100%;
+        margin: 10px 0;
+        
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $default-font-bold;
+        font-size: rem(24);
+        color: $color-white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__preview {
+        max-height: 65px;
+        margin: 5px 0;
+        overflow: hidden;
+        text-align: justify;
+        line-height: rem(16);
+    }
+
+    &__category {
+        display: inline-block;
+        padding: 5px 20px 5px 10px;
+
+        border-radius: 6px;
+        color: $color-white;
+        font-family: $default-font-bold;
+        text-transform: uppercase;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:active {
+            opacity: 0.2;
+        }
+        
+        &-running {
+            background-color: $color-running;
+        }
+
+        &-swimming {
+            background-color: $color-swimming;
+        }
+
+        &-crossfit {
+            background-color: $color-crossfit;
+        }
+
+
+    }
+}
+
+.secondary {
+    display: flex;
+    justify-content: space-between;
+    color: $color-blue;
+
+    &__views {
+        display: flex;
+        @include before-after($fa-var-eye);
+        &::before {
+            margin-left: 120%;
+        }
+    }
+}

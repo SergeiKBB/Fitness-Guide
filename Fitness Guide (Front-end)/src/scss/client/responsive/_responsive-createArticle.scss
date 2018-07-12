@@ -1,0 +1,21 @@
+@media all and (max-width: 425px) {
+    .form {
+        &__item {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        &__label {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+    }
+
+    .tabs__item {
+        width: 35%;
+        &:last-child {
+        display: none;
+    }
+}
+}
+

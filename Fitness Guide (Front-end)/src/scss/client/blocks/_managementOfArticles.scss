@@ -1,0 +1,56 @@
+.management {
+    &__list {
+        display: none;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        border: 1px solid #a8a8a8;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+
+        &-wrap {
+            padding: 10px 10px 0 0;
+        }
+    }
+
+    &__title {
+        display: flex;
+        width: auto;
+        align-items: center;
+        margin: 0;
+        margin-bottom: 5px;
+
+        font-size: rem(20);
+        font-weight: normal;
+    }
+
+}
+
+.btn {
+    
+
+    &__edit {
+        color: $color-white;
+        background-color: $color-gray;
+    }
+
+    &__remove {
+        color: $color-white;
+        background-color: $color-green;
+    }
+
+    &__wrap {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        & .btn {
+            height: auto;
+            padding: 4px 10px;
+            border-radius: 5px;
+            margin: 10px 0 0 10px;
+        }
+    }
+}

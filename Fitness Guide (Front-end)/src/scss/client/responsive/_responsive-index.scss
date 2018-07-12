@@ -1,0 +1,109 @@
+@media (max-width: 1024px) {
+    html {
+        font-size: 13px;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .main-header {
+        padding: 10px;
+    }
+    .carousel {
+        &__title {
+            max-height: 45px;
+        }
+    }
+
+    
+}
+
+@media (max-width:768px) {
+    .burger {
+        display: block;
+    }
+
+    .aside__btn {
+        display: block;
+    }
+    
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        flex-direction: column;
+
+        background-color: $color-blue;
+
+        &_active {
+            display: flex;
+        }
+    }
+    .site-nav {
+        position: static;
+        transform: translate(0,0);
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        &__item {
+            justify-content: flex-start;
+            margin-left: 5px;
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            &:active > .site-nav__link {
+                color: rgba($color-gray, 0.3);
+            }
+
+            &::after {
+                display: none;
+            }
+            
+        }
+        &__link {
+            padding: 5px 0;
+            letter-spacing: 0;
+
+            
+        }
+    }
+    .user-nav {
+        flex-direction: column;
+        &__link {
+            justify-content: flex-start;
+            padding: 5px 0;
+            margin-left: 5px;
+
+            text-transform: uppercase;
+        }
+    }
+
+    .aside-wrap {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 20;
+        top: 0;
+        right: -100vw;
+        transition: 2s;
+        overflow: hidden;
+        background-color: rgba($default-color,0.5);
+    }
+
+    .aside {
+        margin-left: auto;
+        z-index: 10;
+        height: 100%;
+        padding-bottom: 15px;
+        overflow: auto;
+        background-color: $color-white;
+    }
+
+    .modal__login {
+        padding: 40px 4% 30px;
+    }
+}

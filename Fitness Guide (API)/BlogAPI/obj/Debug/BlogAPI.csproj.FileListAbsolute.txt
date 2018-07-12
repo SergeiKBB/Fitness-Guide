@@ -1,0 +1,169 @@
+D:\Practise\Blog\BlogAPI\bin\BlogAPI.dll.config
+D:\Practise\Blog\BlogAPI\bin\BlogAPI.dll
+D:\Practise\Blog\BlogAPI\bin\BlogAPI.pdb
+D:\Practise\Blog\BlogAPI\bin\roslyn\csc.exe
+D:\Practise\Blog\BlogAPI\bin\roslyn\csc.exe.config
+D:\Practise\Blog\BlogAPI\bin\roslyn\csc.rsp
+D:\Practise\Blog\BlogAPI\bin\roslyn\csi.exe
+D:\Practise\Blog\BlogAPI\bin\roslyn\csi.exe.config
+D:\Practise\Blog\BlogAPI\bin\roslyn\csi.rsp
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Practise\Blog\BlogAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.AppContext.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Console.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Diagnostics.Process.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.IO.Compression.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.IO.FileSystem.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.IO.Pipes.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Security.AccessControl.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Security.Claims.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Threading.Thread.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.ValueTuple.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Xml.XPath.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Practise\Blog\BlogAPI\bin\roslyn\vbc.exe
+D:\Practise\Blog\BlogAPI\bin\roslyn\vbc.exe.config
+D:\Practise\Blog\BlogAPI\bin\roslyn\vbc.rsp
+D:\Practise\Blog\BlogAPI\bin\roslyn\VBCSCompiler.exe
+D:\Practise\Blog\BlogAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\Practise\Blog\BlogAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Practise\Blog\BlogAPI\bin\Newtonsoft.Json.dll
+D:\Practise\Blog\BlogAPI\bin\System.Net.Http.Formatting.dll
+D:\Practise\Blog\BlogAPI\bin\System.Web.Http.dll
+D:\Practise\Blog\BlogAPI\bin\System.Web.Http.WebHost.dll
+D:\Practise\Blog\BlogAPI\bin\Newtonsoft.Json.xml
+D:\Practise\Blog\BlogAPI\bin\System.Net.Http.Formatting.xml
+D:\Practise\Blog\BlogAPI\bin\System.Web.Http.xml
+D:\Practise\Blog\BlogAPI\bin\System.Web.Http.WebHost.xml
+D:\Practise\Blog\BlogAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Practise\Blog\BlogAPI\obj\Debug\BlogAPI.csprojAssemblyReference.cache
+D:\Practise\Blog\BlogAPI\obj\Debug\BlogAPI.csproj.CoreCompileInputs.cache
+D:\Practise\Blog\BlogAPI\obj\Debug\BlogAPI.csproj.CopyComplete
+D:\Practise\Blog\BlogAPI\obj\Debug\BlogAPI.dll
+D:\Practise\Blog\BlogAPI\obj\Debug\BlogAPI.pdb
+D:\Practise\Blog\BlogAPI\bin\Autofac.dll
+D:\Practise\Blog\BlogAPI\bin\Autofac.Integration.WebApi.dll
+D:\Practise\Blog\BlogAPI\bin\Blog.Server.dll
+D:\Practise\Blog\BlogAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\Practise\Blog\BlogAPI\bin\Swashbuckle.Core.dll
+D:\Practise\Blog\BlogAPI\bin\WebActivatorEx.dll
+D:\Practise\Blog\BlogAPI\bin\EntityFramework.dll
+D:\Practise\Blog\BlogAPI\bin\Blog.Server.pdb
+D:\Practise\Blog\BlogAPI\bin\Blog.Server.dll.config
+D:\Practise\Blog\BlogAPI\bin\Autofac.xml
+D:\Practise\Blog\BlogAPI\bin\Autofac.Integration.WebApi.xml
+D:\Practise\Blog\BlogAPI\bin\EntityFramework.xml
+D:\Practise\Blog\BlogAPI\bin\EntityFramework.SqlServer.dll
+D:\Practise\Blog\BlogAPI\bin\EntityFramework.SqlServer.xml
+D:\Practise\Blog\BlogAPI\bin\log4net.dll
+D:\Practise\Blog\BlogAPI\bin\log4net.xml
+D:\Practise\Blog\BlogAPI\bin\jose-jwt.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\BlogAPI.dll.config
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\BlogAPI.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\BlogAPI.pdb
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\csc.exe
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\csc.exe.config
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\csc.rsp
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\csi.exe
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\csi.exe.config
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\csi.rsp
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.AppContext.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Console.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Diagnostics.Process.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.IO.Compression.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.IO.FileSystem.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.IO.Pipes.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Security.AccessControl.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Security.Claims.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Threading.Thread.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.ValueTuple.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Xml.XPath.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\vbc.exe
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\vbc.exe.config
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\vbc.rsp
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\VBCSCompiler.exe
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Autofac.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Autofac.Integration.WebApi.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Blog.Server.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\EntityFramework.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\EntityFramework.SqlServer.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\jose-jwt.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\log4net.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Newtonsoft.Json.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Swashbuckle.Core.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Net.Http.Formatting.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Web.Http.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Web.Http.WebHost.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\WebActivatorEx.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Blog.Server.pdb
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Blog.Server.dll.config
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Autofac.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Autofac.Integration.WebApi.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\EntityFramework.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\EntityFramework.SqlServer.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\log4net.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Newtonsoft.Json.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Net.Http.Formatting.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Web.Http.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Web.Http.WebHost.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\obj\Debug\BlogAPI.csprojAssemblyReference.cache
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\obj\Debug\BlogAPI.csproj.CoreCompileInputs.cache
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\obj\Debug\BlogAPI.csproj.CopyComplete
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\obj\Debug\BlogAPI.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\obj\Debug\BlogAPI.pdb
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Web.Cors.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Web.Http.Cors.dll
+D:\Teaching\web\epam\Final projeck\Blog\BlogAPI\bin\System.Web.Http.Cors.xml

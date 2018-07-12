@@ -1,0 +1,28 @@
+.main-header {
+    position: relative;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    background-color: rgba(167, 208, 255, 0.664);
+}
+
+.top-wrapper {
+    align-items: center;
+}
+
+.logo {
+    &__link {
+        display: flex;
+        align-items: center;
+        color: $color-blue;
+        font-size: rem(26);
+        font-family: "Tangerine Bold", cursive;
+    }
+    &__img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.site-nav {
+        margin: 0 auto;
+}

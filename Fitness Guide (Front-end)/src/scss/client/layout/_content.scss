@@ -1,0 +1,15 @@
+.content {
+    margin-top: 30px;
+
+    &__title {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: rem(36);
+    }
+}
+
+.line {
+    margin-bottom: 50px;
+    border: 1px solid $color-gray;
+}
