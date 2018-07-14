@@ -8,6 +8,7 @@ namespace Blog.Server.Database.Entities
     {
         public string Title { get; set; }
         public string Description { get; set; }
+        public int ViewsCount { get; set; }
         [ForeignKey(nameof(Author))]
         public Guid AuthorId { get; set; }
         public User Author { get; set; }

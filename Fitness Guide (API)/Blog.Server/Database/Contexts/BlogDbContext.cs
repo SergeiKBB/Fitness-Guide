@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Threading.Tasks;
@@ -22,6 +23,27 @@ namespace Blog.Server.Database.Contexts
 
         public async Task<int> SaveChangesAsync()
         {
+            foreach (var dbEntityEntry in ChangeTracker.Entries())
+            {
+                var entityBase = dbEntityEntry.Entity as EntityBase;
+
+                if (entityBase == null)
+                {
+                    continue;
+                }
+
+                if ((dbEntityEntry.State & EntityState.Added) != 0)
+                {
+                    entityBase.CreationDate = DateTime.UtcNow;
+                    entityBase.UpdateDate = DateTime.UtcNow;
+                }
+
+                if ((dbEntityEntry.State & EntityState.Modified) != 0)
+                {
+                    entityBase.UpdateDate = DateTime.UtcNow;
+                }
+            }
+
             return await base.SaveChangesAsync();
         }
 

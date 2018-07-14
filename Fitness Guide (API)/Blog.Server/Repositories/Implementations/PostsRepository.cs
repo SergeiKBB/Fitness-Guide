@@ -22,11 +22,14 @@ namespace Blog.Server.Repositories.Implementations
         {
             var requestCategoriesIds = request.CategoriesIds ?? new List<Guid>();
 
+            var random = new Random();
+
             var post = new Post
             {
                 AuthorId = request.AuthorId,
                 Title = request.Title,
                 Description = request.Description,
+                ViewsCount = random.Next(100),
                 Categories = DbContext.Categories.Where(c => requestCategoriesIds.Contains(c.Id)).ToList()
             };
 
@@ -90,6 +93,9 @@ namespace Blog.Server.Repositories.Implementations
                 Id = post.Id,
                 Title = post.Title,
                 Description = post.Description,
+                ViewsCount = post.ViewsCount,
+                CreationDate = post.CreationDate,
+                UpdateDate = post.UpdateDate,
                 Author = new GetPostResponse.AuthorInfo
                 {
                     Id = post.AuthorId,
@@ -113,7 +119,10 @@ namespace Blog.Server.Repositories.Implementations
                 {
                     Id = p.Id,
                     Title = p.Title,
-                    Description = p.Description
+                    Description = p.Description,
+                    ViewsCount = p.ViewsCount,
+                    CreationDate = p.CreationDate,
+                    UpdateDate = p.UpdateDate,
                 }).ToListAsync();
 
             return new GetAllPostsResponse

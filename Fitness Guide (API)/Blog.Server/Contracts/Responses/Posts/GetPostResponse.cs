@@ -10,6 +10,9 @@ namespace Blog.Server.Contracts.Responses.Posts
         public string Description { get; set; }
         public AuthorInfo Author { get; set; }
         public ICollection<Category> Categories { get; set; }
+        public int ViewsCount { get; set; }
+        public DateTime CreationDate { get; set; }
+        public DateTime UpdateDate { get; set; }
 
         public class AuthorInfo
         {
