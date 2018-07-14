@@ -3,7 +3,7 @@ using Autofac.Features.AttributeFilters;
 using Autofac.Integration.WebApi;
 using BlogAPI.Authorization;
 
-namespace BlogAPI
+namespace BlogAPI.Modules
 {
     public class ApiModule : Module
     {

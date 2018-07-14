@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
-using Blog.Server.Contracts.Requests.CmsUser;
+using Blog.Server.Contracts.Requests.CmsUsers;
 using Blog.Server.Exceptions.Authorization;
 using Blog.Server.Services.Abstractions;
 using BlogAPI.Authorization;
@@ -30,7 +30,7 @@ namespace BlogAPI.Controllers.Base
         public override async Task<HttpResponseMessage> ExecuteAsync(HttpControllerContext controllerContext,
             CancellationToken cancellationToken)
         {
-            if (!Request.Headers.TryGetValues("AccessToken", out var tokens))
+            if (!controllerContext.Request.Headers.TryGetValues("Authorization", out var tokens))
             {
                 throw new MissedAccessTokenException();
             }

@@ -1,6 +1,7 @@
 using System.Web.Http;
 using WebActivatorEx;
 using BlogAPI;
+using BlogAPI.Swagger;
 using Swashbuckle.Application;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
@@ -34,9 +35,11 @@ namespace BlogAPI
                         //
                         c.SingleApiVersion("v1", "BlogAPI");
 
+                        c.OperationFilter<AuthorizationHeaderOperationFilter>();
+
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //
-                        //c.PrettyPrint();
+                        c.PrettyPrint();
 
                         // If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
                         // In this case, you must provide a lambda that tells Swashbuckle which actions should be
@@ -61,7 +64,7 @@ namespace BlogAPI
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")

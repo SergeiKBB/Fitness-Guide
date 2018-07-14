@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Blog.Server.Contracts.Requests.CmsUser
+namespace Blog.Server.Contracts.Requests.CmsUsers
 {
     public class GetCmsUserRefreshTokenByIdRequest
     {
