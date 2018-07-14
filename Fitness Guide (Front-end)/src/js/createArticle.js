@@ -21,7 +21,6 @@
             data.append("img", file.files[0]);
             data.append("text", text.value);
 
-            console.dir(file);
             var validation = new ValidationArticle({
                 title: title,
                 category: category,
@@ -30,10 +29,15 @@
             });
 
             if(validation.check()) {
+                
                 var request = sendRequest("POST", createArticleUrl, data);
                 request.onreadystatechange = function() {
                     if(request.status == 201) {
-                        var createArticleMessage = createElement("div", { className: "signup-message" }, "", "You have successfully created an article")
+                        var createArticleMessage = createElement("div", { className: "signup-message" }, "", "You have successfully created an article");
+                        document.body.appendChild(createArticleMessage);
+                        setTimeout(function(){
+                            createArticleMessage.style.top = "-" + getComputedStyle(createArticleMessage).height;
+                        },2000);
                     }
                 };
             }

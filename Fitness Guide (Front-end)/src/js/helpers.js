@@ -1,5 +1,6 @@
 var createElement;
 var ValidationArticle;
+var EventEmitter;
 
 (function() {
 createElement = function(tag, props, styles, child) {
@@ -70,6 +71,21 @@ ValidationArticle.prototype.check = function() {
     }
 
     return this.result;
+};
+
+EventEmitter = function() {
+    this.events = {};
+}
+
+EventEmitter.prototype.on = function(type, callback) {
+    this.events[type] = this.events[type] || [];
+    this.events[type].push(callback);
+}
+
+EventEmitter.emit = function(type, arg) {
+    if(this.events[type]) {
+        this.events[type].forEach( callback => callback(arg));
+    }
 }
 
 })();
