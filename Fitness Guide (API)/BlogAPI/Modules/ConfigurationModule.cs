@@ -3,7 +3,7 @@ using Autofac;
 using BlogAPI.Configurations.ConfigurationSections;
 using BlogAPI.Configurations.Implementations;
 
-namespace BlogAPI
+namespace BlogAPI.Modules
 {
     public class ConfigurationModule : Module
     {

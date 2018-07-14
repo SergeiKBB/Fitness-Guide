@@ -62,17 +62,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Requests\Categories\CreateCategoryRequest.cs" />
+    <Compile Include="Contracts\Requests\Categories\DeleteCategoryRequest.cs" />
+    <Compile Include="Contracts\Requests\Categories\GetCategoriesRequest.cs" />
+    <Compile Include="Contracts\Requests\Categories\GetCategoryByIdRequest.cs" />
+    <Compile Include="Contracts\Requests\Categories\UpdateCategoryRequest.cs" />
     <Compile Include="Contracts\Requests\CmsUsers\GetCmsUserRefreshTokenByIdRequest.cs" />
     <Compile Include="Contracts\Requests\CmsUsers\GetCmsUserIdByCredentialsRequest.cs" />
     <Compile Include="Contracts\Requests\CmsUsers\GetCmsUserIdByRefreshTokenRequest.cs" />
     <Compile Include="Contracts\Requests\CmsUsers\UpdateCmsUserRefreshTokenRequest.cs" />
+    <Compile Include="Contracts\Requests\Posts\CreatePostRequest.cs" />
+    <Compile Include="Contracts\Requests\Posts\DeletePostRequest.cs" />
+    <Compile Include="Contracts\Requests\Posts\GetAllPostsRequest.cs" />
+    <Compile Include="Contracts\Requests\Posts\GetPostByIdRequest.cs" />
+    <Compile Include="Contracts\Requests\Posts\UpdatePostRequest.cs" />
     <Compile Include="Contracts\Requests\Users\CreateUserRequest.cs" />
     <Compile Include="Contracts\Requests\Users\GetUserIdByCredentialsRequest.cs" />
     <Compile Include="Contracts\Requests\Users\GetUserIdByRefreshTokenRequest.cs" />
     <Compile Include="Contracts\Requests\Users\GetUserRefreshTokenByIdRequest.cs" />
     <Compile Include="Contracts\Requests\Users\UpdateUserRefreshTokenRequest.cs" />
+    <Compile Include="Contracts\Responses\Categories\CategoryResponse.cs" />
+    <Compile Include="Contracts\Responses\Categories\GetCategoriesResponse.cs" />
+    <Compile Include="Contracts\Responses\Categories\GetCategoryResponse.cs" />
     <Compile Include="Contracts\Responses\CmsUsers\GetCmsUserRefreshTokenResponse.cs" />
     <Compile Include="Contracts\Responses\CmsUsers\GetCmsUserIdResponse.cs" />
+    <Compile Include="Contracts\Responses\Posts\GetAllPostsResponse.cs" />
+    <Compile Include="Contracts\Responses\Posts\GetPostResponse.cs" />
     <Compile Include="Contracts\Responses\Users\GetUserIdResponse.cs" />
     <Compile Include="Contracts\Responses\Users\GetUserRefreshTokenResponse.cs" />
     <Compile Include="Database\Contexts\BlogDbContext.cs" />
@@ -110,30 +125,34 @@
     <Compile Include="Migrations\201807011643470_Initial.Designer.cs">
       <DependentUpon>201807011643470_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807021846245_AddCategoriesAndRefreshTokens.cs" />
-    <Compile Include="Migrations\201807021846245_AddCategoriesAndRefreshTokens.Designer.cs">
-      <DependentUpon>201807021846245_AddCategoriesAndRefreshTokens.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807031814046_AddCategoriesAndCmsUsers.cs" />
-    <Compile Include="Migrations\201807031814046_AddCategoriesAndCmsUsers.Designer.cs">
-      <DependentUpon>201807031814046_AddCategoriesAndCmsUsers.cs</DependentUpon>
+    <Compile Include="Migrations\201807130345156_AddCategoriesAndCmsUsers.cs" />
+    <Compile Include="Migrations\201807130345156_AddCategoriesAndCmsUsers.Designer.cs">
+      <DependentUpon>201807130345156_AddCategoriesAndCmsUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Abstractions\ICategoriesRepository.cs" />
     <Compile Include="Repositories\Abstractions\ICmsUserRepository.cs" />
+    <Compile Include="Repositories\Abstractions\IPostsRepository.cs" />
     <Compile Include="Repositories\Abstractions\IUserRepository.cs" />
     <Compile Include="Repositories\Abstractions\RepositoryBase.cs" />
+    <Compile Include="Repositories\Implementations\CategoriesRepository.cs" />
     <Compile Include="Repositories\Implementations\CmsUserRepository.cs" />
+    <Compile Include="Repositories\Implementations\PostsRepository.cs" />
     <Compile Include="Repositories\Implementations\UserRepository.cs" />
     <Compile Include="ServerModule.cs" />
     <Compile Include="Services\Abstractions\Hashing\IRandomStringService.cs" />
     <Compile Include="Services\Abstractions\Hashing\ISha512Service.cs" />
+    <Compile Include="Services\Abstractions\ICategoriesManagementService.cs" />
     <Compile Include="Services\Abstractions\ICmsUserManagementService.cs" />
     <Compile Include="Services\Abstractions\IManagementService.cs" />
+    <Compile Include="Services\Abstractions\IPostsManagementService.cs" />
     <Compile Include="Services\Abstractions\IUserManagementService.cs" />
+    <Compile Include="Services\Implementations\CategoriesManagementService.cs" />
     <Compile Include="Services\Implementations\CmsUserManagementService.cs" />
     <Compile Include="Services\Implementations\Hashing\RandomStringService.cs" />
     <Compile Include="Services\Implementations\Hashing\Sha512Service.cs" />
+    <Compile Include="Services\Implementations\PostsManagementService.cs" />
     <Compile Include="Services\Implementations\UserManagementService.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -153,11 +172,8 @@
     <EmbeddedResource Include="Migrations\201807011643470_Initial.resx">
       <DependentUpon>201807011643470_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807021846245_AddCategoriesAndRefreshTokens.resx">
-      <DependentUpon>201807021846245_AddCategoriesAndRefreshTokens.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807031814046_AddCategoriesAndCmsUsers.resx">
-      <DependentUpon>201807031814046_AddCategoriesAndCmsUsers.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807130345156_AddCategoriesAndCmsUsers.resx">
+      <DependentUpon>201807130345156_AddCategoriesAndCmsUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -17,7 +17,7 @@ namespace Blog.Server.Exceptions.Logging
 
         internal static JToken SerializeException(Exception e)
         {
-            JToken exceptionToken;
+            JObject exceptionToken;
             var serializer = JsonSerializer.CreateDefault();
 
             try
@@ -32,7 +32,7 @@ namespace Blog.Server.Exceptions.Logging
                 }
                 else
                 {
-                    exceptionToken = JToken.FromObject(e, serializer);
+                    exceptionToken = JObject.FromObject(e, serializer);
                 }
             }
             catch (Exception exception)
@@ -86,13 +86,15 @@ namespace Blog.Server.Exceptions.Logging
                     ["Exception"] = SerializeException(context.Exception)
                 };
 
+                var loggingObject = exceptionObject.ToString();
+
                 if (context.Exception is BlogException)
                 {
-                    _logger.Warn(exceptionObject);
+                    _logger.Warn(loggingObject);
                 }
                 else
                 {
-                    _logger.Error(exceptionObject);
+                    _logger.Error(loggingObject);
                 }
             }
             catch (Exception e)

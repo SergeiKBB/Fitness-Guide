@@ -1,8 +1,9 @@
 ﻿using System.Web.Http;
-using System.Web.Http.Cors;
 using Autofac;
 using Autofac.Integration.WebApi;
 using Blog.Server;
+using BlogAPI.Modules;
+using log4net.Config;
 
 namespace BlogAPI
 {
@@ -10,11 +11,12 @@ namespace BlogAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            ICorsPolicyProvider corsConfig = new EnableCorsAttribute("*", "*", "*");
             // Web API configuration and services
-            config.EnableCors(corsConfig);
+
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            XmlConfigurator.Configure();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
