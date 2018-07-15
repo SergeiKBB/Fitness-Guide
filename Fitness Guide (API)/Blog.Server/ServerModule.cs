@@ -5,6 +5,7 @@ using Blog.Server.Exceptions.Logging;
 using Blog.Server.Repositories.Abstractions;
 using Blog.Server.Services.Abstractions;
 using Blog.Server.Services.Implementations.Hashing;
+using FluentValidation;
 
 namespace Blog.Server
 {
@@ -22,12 +23,19 @@ namespace Blog.Server
                 .AssignableTo<IManagementService>()
                 .AsImplementedInterfaces();
 
-            builder.RegisterType<ExceptionHandler>().AsImplementedInterfaces(); 
+            builder.RegisterType<ExceptionHandler>().AsImplementedInterfaces();
 
             builder.RegisterType<ExceptionLogger>().AsImplementedInterfaces();
 
             builder.RegisterType<Sha512Service>().AsImplementedInterfaces();
             builder.RegisterType<RandomStringService>().AsImplementedInterfaces();
+
+            builder.RegisterAssemblyTypes(ThisAssembly)
+                .AsClosedTypesOf(typeof(IValidator<>))
+                .AsImplementedInterfaces();
+
+            builder.RegisterGeneric(typeof(InlineValidator<>))
+                .As(typeof(IValidator<>));
         }
     }
 }

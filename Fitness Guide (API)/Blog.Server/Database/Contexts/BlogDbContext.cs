@@ -21,13 +21,11 @@ namespace Blog.Server.Database.Contexts
             Set<TEntity>().RemoveRange(entities);
         }
 
-        public async Task<int> SaveChangesAsync()
+        public override async Task<int> SaveChangesAsync()
         {
             foreach (var dbEntityEntry in ChangeTracker.Entries())
             {
-                var entityBase = dbEntityEntry.Entity as EntityBase;
-
-                if (entityBase == null)
+                if (!(dbEntityEntry.Entity is EntityBase entityBase))
                 {
                     continue;
                 }
