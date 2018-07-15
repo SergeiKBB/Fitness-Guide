@@ -11,7 +11,7 @@ namespace Blog.Server.Services.Implementations
     {
         private readonly IUserRepository _userRepository;
 
-        protected UserManagementService(ILifetimeScope lifetimeScope, IUserRepository userRepository) : base(lifetimeScope)
+        public UserManagementService(ILifetimeScope lifetimeScope, IUserRepository userRepository) : base(lifetimeScope)
         {
             _userRepository = userRepository;
         }
