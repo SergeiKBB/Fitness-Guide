@@ -132,4 +132,7 @@
   <data name="MissedAccessTokenException" xml:space="preserve">
     <value>This request must have 'AccessToken' header</value>
   </data>
+  <data name="ValidationException" xml:space="preserve">
+    <value>Object is not valid</value>
+  </data>
 </root>

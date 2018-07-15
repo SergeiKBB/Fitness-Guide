@@ -132,4 +132,7 @@
   <data name="MissedAccessTokenException" xml:space="preserve">
     <value>blog-0002</value>
   </data>
+  <data name="ValidationException" xml:space="preserve">
+    <value>blog-0006</value>
+  </data>
 </root>

@@ -104,5 +104,14 @@ namespace Blog.Server.Exceptions {
                 return ResourceManager.GetString("MissedAccessTokenException", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to blog-0006.
+        /// </summary>
+        internal static string ValidationException {
+            get {
+                return ResourceManager.GetString("ValidationException", resourceCulture);
+            }
+        }
     }
 }
