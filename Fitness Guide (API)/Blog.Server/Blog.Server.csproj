@@ -74,8 +74,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\Requests\Base\IRequest.cs" />
-    <Compile Include="Contracts\Requests\Base\IResponse.cs" />
     <Compile Include="Contracts\Requests\Categories\CreateCategoryRequest.cs" />
     <Compile Include="Contracts\Requests\Categories\DeleteCategoryRequest.cs" />
     <Compile Include="Contracts\Requests\Categories\GetCategoriesRequest.cs" />
