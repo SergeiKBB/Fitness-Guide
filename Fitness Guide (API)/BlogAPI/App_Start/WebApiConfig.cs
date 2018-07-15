@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 using Autofac;
 using Autofac.Integration.WebApi;
 using Blog.Server;
@@ -23,7 +24,8 @@ namespace BlogAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
+            var corsPolicyProvider = new EnableCorsAttribute("*","*","*","*");
+            config.EnableCors(corsPolicyProvider);
             var builder = new ContainerBuilder();
 
             builder.RegisterModule<ServerModule>();
