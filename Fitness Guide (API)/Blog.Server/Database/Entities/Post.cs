@@ -9,9 +9,9 @@ namespace Blog.Server.Database.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public int ViewsCount { get; set; }
-        [ForeignKey(nameof(Author))]
+        [ForeignKey(nameof(CmsUser))]
         public Guid AuthorId { get; set; }
-        public User Author { get; set; }
+        public CmsUser CmsUser { get; set; }
         public ICollection<Comment> Comments { get; set; }
         public ICollection<Category> Categories { get; set; }
     }

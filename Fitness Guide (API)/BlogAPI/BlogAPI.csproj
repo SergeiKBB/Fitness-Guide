@@ -114,8 +114,10 @@
   <ItemGroup>
     <Compile Include="Controllers\CmsUser\CategoriesController.cs" />
     <Compile Include="Controllers\CmsUser\PostsController.cs" />
-    <Compile Include="Controllers\PublicCmsLoginController.cs" />
+    <Compile Include="Controllers\Public\PublicCmsLoginController.cs" />
+    <Compile Include="Controllers\Public\PublicPostsController.cs" />
     <Compile Include="Models\AccessTokenResponseModel.cs" />
+    <Compile Include="Models\Posts\CreatePostRequestModel.cs" />
     <Compile Include="Modules\ApiModule.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -129,8 +131,8 @@
     <Compile Include="Configurations\Implementations\AccessTokenConfiguration.cs" />
     <Compile Include="Controllers\Base\CmsUserBaseController.cs" />
     <Compile Include="Controllers\Base\UserBaseController.cs" />
-    <Compile Include="Controllers\PublicLoginController.cs" />
-    <Compile Include="Controllers\PublicRegistrationController.cs" />
+    <Compile Include="Controllers\Public\PublicLoginController.cs" />
+    <Compile Include="Controllers\Public\PublicRegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -7,6 +7,7 @@ using Blog.Server.Services.Abstractions;
 using BlogAPI.Authorization;
 using BlogAPI.Authorization.Payload;
 using BlogAPI.Controllers.Base;
+using BlogAPI.Models.Posts;
 
 namespace BlogAPI.Controllers.CmsUser
 {
@@ -24,8 +25,16 @@ namespace BlogAPI.Controllers.CmsUser
 
         [HttpPost]
         [Route]
-        public async Task CreatePost(CreatePostRequest request)
+        public async Task CreatePost(CreatePostRequestModel model)
         {
+            var request = new CreatePostRequest
+            {
+                AuthorId = UserId,
+                CategoriesIds = model?.CategoriesIds,
+                Description = model.Description,
+                Title = model.Title
+            };
+
             await _postsManagementService.CreatePost(request);
         }
 
@@ -41,32 +50,6 @@ namespace BlogAPI.Controllers.CmsUser
         public async Task DeletePost(DeletePostRequest request)
         {
             await _postsManagementService.DeletePost(request);
-        }
-
-        [HttpGet]
-        [Route]
-        public async Task<GetAllPostsResponse> GetAllPosts([FromUri] Guid[] categoriesIds = null)
-        {
-            categoriesIds = categoriesIds ?? new Guid[0];
-
-            var posts = await _postsManagementService.GetAllPosts(new GetAllPostsRequest
-            {
-                CategoriesIds = categoriesIds
-            });
-
-            return posts;
-        }
-
-        [HttpGet]
-        [Route("{id}")]
-        public async Task<GetPostResponse> GetPostById(Guid id)
-        {
-            var post = await _postsManagementService.GetPostById(new GetPostByIdRequest
-            {
-                Id = id
-            });
-
-            return post;
         }
     }
 }

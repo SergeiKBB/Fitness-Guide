@@ -8,7 +8,7 @@ using BlogAPI.Authorization.Payload;
 using BlogAPI.Models;
 using BlogAPI.Models.Login;
 
-namespace BlogAPI.Controllers
+namespace BlogAPI.Controllers.Public
 {
     [RoutePrefix("api/public/cms-login")]
     public class PublicCmsLoginController : ApiController

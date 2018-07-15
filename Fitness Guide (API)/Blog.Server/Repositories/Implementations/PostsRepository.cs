@@ -48,8 +48,7 @@ namespace Blog.Server.Repositories.Implementations
             {
                 throw new EntityNotFoundException<Post>();
             }
-
-            post.AuthorId = request.AuthorId ?? post.AuthorId;
+            
             post.Title = request.Title ?? post.Title;
             post.Description = request.Description ?? post.Description;
 
@@ -79,7 +78,7 @@ namespace Blog.Server.Repositories.Implementations
         public async Task<GetPostResponse> GetPostById(GetPostByIdRequest request)
         {
             var post = await DbContext.Posts
-                .Include(p => p.Author)
+                .Include(p => p.CmsUser)
                 .Include(p => p.Categories)
                 .FirstOrDefaultAsync(p => p.Id == request.Id);
 
@@ -99,8 +98,7 @@ namespace Blog.Server.Repositories.Implementations
                 Author = new GetPostResponse.AuthorInfo
                 {
                     Id = post.AuthorId,
-                    FirstName = post.Author.FirstName,
-                    LastName = post.Author.LastName
+                    Email = post.CmsUser.Email
                 },
                 Categories = post.Categories.Select(c => new GetPostResponse.Category
                 {

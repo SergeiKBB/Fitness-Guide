@@ -148,6 +148,10 @@
     <Compile Include="Migrations\201807141624032_AddViewsCountCreationAndUpdateDate.Designer.cs">
       <DependentUpon>201807141624032_AddViewsCountCreationAndUpdateDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807151724045_UpdateAuthorTypeInPosts.cs" />
+    <Compile Include="Migrations\201807151724045_UpdateAuthorTypeInPosts.Designer.cs">
+      <DependentUpon>201807151724045_UpdateAuthorTypeInPosts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Abstractions\ICategoriesRepository.cs" />
@@ -197,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807141624032_AddViewsCountCreationAndUpdateDate.resx">
       <DependentUpon>201807141624032_AddViewsCountCreationAndUpdateDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807151724045_UpdateAuthorTypeInPosts.resx">
+      <DependentUpon>201807151724045_UpdateAuthorTypeInPosts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
