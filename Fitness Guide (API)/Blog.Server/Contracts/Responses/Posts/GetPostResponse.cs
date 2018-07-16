@@ -13,6 +13,7 @@ namespace Blog.Server.Contracts.Responses.Posts
         public int ViewsCount { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime UpdateDate { get; set; }
+        public ImageWithTransforms Image { get; set; }
 
         public class AuthorInfo
         {
@@ -24,6 +25,19 @@ namespace Blog.Server.Contracts.Responses.Posts
         {
             public Guid Id { get; set; }
             public string Name { get; set; }
+        }
+
+        public class ImageWithTransforms
+        {
+            public Guid Id { get; set; }
+            public string Url { get; set; }
+            public ICollection<ImageTransformation> ImageTransforms { get; set; }
+        }
+
+        public class ImageTransformation
+        {
+            public string TransformName { get; set; }
+            public string Url { get; set; }
         }
     }
 

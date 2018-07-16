@@ -121,11 +121,13 @@
     <Compile Include="Configurations\Implementations\CloudinaryConfiguration.cs" />
     <Compile Include="Configurations\ConfigurationSections\CloudinaryConfigurationSection.cs" />
     <Compile Include="Controllers\CmsUser\CategoriesController.cs" />
+    <Compile Include="Controllers\CmsUser\ImagesController.cs" />
     <Compile Include="Controllers\CmsUser\PostsController.cs" />
     <Compile Include="Controllers\Public\PublicCategoriesController.cs" />
     <Compile Include="Controllers\Public\PublicCmsLoginController.cs" />
     <Compile Include="Controllers\Public\PublicPostsController.cs" />
     <Compile Include="Models\AccessTokenResponseModel.cs" />
+    <Compile Include="Models\Images\CreateImageResponseModel.cs" />
     <Compile Include="Models\Posts\CreatePostRequestModel.cs" />
     <Compile Include="Modules\ApiModule.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />

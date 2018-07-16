@@ -30,7 +30,8 @@ namespace Blog.Server.Repositories.Implementations
                 Title = request.Title,
                 Description = request.Description,
                 ViewsCount = random.Next(100),
-                Categories = DbContext.Categories.Where(c => requestCategoriesIds.Contains(c.Id)).ToList()
+                Categories = DbContext.Categories.Where(c => requestCategoriesIds.Contains(c.Id)).ToList(),
+                ImageId = request.ImageId
             };
 
             DbContext.Posts.Add(post);
@@ -48,16 +49,16 @@ namespace Blog.Server.Repositories.Implementations
             {
                 throw new EntityNotFoundException<Post>();
             }
-            
+
             post.Title = request.Title ?? post.Title;
             post.Description = request.Description ?? post.Description;
-
+            post.ImageId = request.ImageId ?? post.ImageId;
             if (request.CategoriesIds != null)
             {
                 post.Categories = await DbContext.Categories.Where(c => request.CategoriesIds.Contains(c.Id))
                     .ToListAsync();
             }
-            
+
             await DbContext.SaveChangesAsync();
         }
 
@@ -77,35 +78,44 @@ namespace Blog.Server.Repositories.Implementations
 
         public async Task<GetPostResponse> GetPostById(GetPostByIdRequest request)
         {
-            var post = await DbContext.Posts
-                .Include(p => p.CmsUser)
-                .Include(p => p.Categories)
+            var postToGet = await DbContext.Posts.Select(post => new GetPostResponse
+                {
+                    Id = post.Id,
+                    Title = post.Title,
+                    Description = post.Description,
+                    ViewsCount = post.ViewsCount,
+                    CreationDate = post.CreationDate,
+                    UpdateDate = post.UpdateDate,
+                    Author = new GetPostResponse.AuthorInfo
+                    {
+                        Id = post.AuthorId,
+                        Email = post.CmsUser.Email
+                    },
+                    Categories = post.Categories.Select(c => new GetPostResponse.Category
+                    {
+                        Id = c.Id,
+                        Name = c.Name
+                    }).ToList(),
+                    Image = new GetPostResponse.ImageWithTransforms
+                    {
+                        Url = post.Image.Url,
+                        Id = post.ImageId,
+                        ImageTransforms = post.Image.ImageTransforms.Select(transform =>
+                            new GetPostResponse.ImageTransformation
+                            {
+                                Url = transform.Url,
+                                TransformName = transform.TransformName
+                            }).ToList()
+                    }
+                })
                 .FirstOrDefaultAsync(p => p.Id == request.Id);
 
-            if (post == null)
+            if (postToGet == null)
             {
                 throw new EntityNotFoundException<Post>();
             }
 
-            return new GetPostResponse
-            {
-                Id = post.Id,
-                Title = post.Title,
-                Description = post.Description,
-                ViewsCount = post.ViewsCount,
-                CreationDate = post.CreationDate,
-                UpdateDate = post.UpdateDate,
-                Author = new GetPostResponse.AuthorInfo
-                {
-                    Id = post.AuthorId,
-                    Email = post.CmsUser.Email
-                },
-                Categories = post.Categories.Select(c => new GetPostResponse.Category
-                {
-                    Id = c.Id,
-                    Name = c.Name
-                }).ToList()
-            };
+            return postToGet;
         }
 
         public async Task<GetAllPostsResponse> GetAllPosts(GetAllPostsRequest request)
