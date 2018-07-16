@@ -41,26 +41,5 @@ namespace BlogAPI.Controllers.CmsUser
         {
             await _categoriesManagementService.DeleteCategory(request);
         }
-
-        [HttpGet]
-        [Route("{id}")]
-        public async Task<GetCategoryResponse> GetCategory(Guid id)
-        {
-            var category = await _categoriesManagementService.GetCategoryById(new GetCategoryByIdRequest
-            {
-                Id = id
-            });
-
-            return category;
-        }
-        
-        [HttpGet]
-        [Route]
-        public async Task<GetCategoriesResponse> GetAllCategories()
-        {
-            var categories = await _categoriesManagementService.GetCategories(new GetCategoriesRequest());
-
-            return categories;
-        }
     }
 }
