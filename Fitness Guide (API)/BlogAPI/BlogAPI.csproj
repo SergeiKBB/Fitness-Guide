@@ -120,6 +120,7 @@
   <ItemGroup>
     <Compile Include="Controllers\CmsUser\CategoriesController.cs" />
     <Compile Include="Controllers\CmsUser\PostsController.cs" />
+    <Compile Include="Controllers\Public\PublicCategoriesController.cs" />
     <Compile Include="Controllers\Public\PublicCmsLoginController.cs" />
     <Compile Include="Controllers\Public\PublicPostsController.cs" />
     <Compile Include="Models\AccessTokenResponseModel.cs" />

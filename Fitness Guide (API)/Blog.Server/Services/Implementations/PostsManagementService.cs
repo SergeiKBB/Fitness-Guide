@@ -19,7 +19,7 @@ namespace Blog.Server.Services.Implementations
 
         public async Task CreatePost(CreatePostRequest request)
         {
-            await ProcessRequest(request, CreatePost);
+            await ProcessRequest(request, _postsRepository.CreatePost);
         }
 
         public async Task UpdatePost(UpdatePostRequest request)
