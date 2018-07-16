@@ -4,6 +4,8 @@ using System.Data;
 using System.Data.Entity;
 using System.Threading.Tasks;
 using Blog.Server.Database.Entities;
+using Blog.Server.Database.Entities.Base;
+using Blog.Server.Database.Entities.Images;
 
 namespace Blog.Server.Database.Contexts
 {
@@ -25,7 +27,7 @@ namespace Blog.Server.Database.Contexts
         {
             foreach (var dbEntityEntry in ChangeTracker.Entries())
             {
-                if (!(dbEntityEntry.Entity is EntityBase entityBase))
+                if (!(dbEntityEntry.Entity is IEntity entityBase))
                 {
                     continue;
                 }
@@ -50,5 +52,7 @@ namespace Blog.Server.Database.Contexts
         public IDbSet<Comment> Comments { get; set; }
         public IDbSet<CmsUser> CmsUsers { get; set; }
         public IDbSet<Category> Categories { get; set; }
+        public IDbSet<Image> Images { get; set; }
+        public IDbSet<ImageTransform> ImageTransforms { get; set; }
     }
 }

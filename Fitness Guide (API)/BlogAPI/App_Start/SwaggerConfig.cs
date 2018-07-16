@@ -36,7 +36,6 @@ namespace BlogAPI
                         c.SingleApiVersion("v1", "BlogAPI");
 
                         c.OperationFilter<AuthorizationHeaderOperationFilter>();
-
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //
                         c.PrettyPrint();
