@@ -118,6 +118,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\Implementations\CloudinaryConfiguration.cs" />
+    <Compile Include="Configurations\ConfigurationSections\CloudinaryConfigurationSection.cs" />
     <Compile Include="Controllers\CmsUser\CategoriesController.cs" />
     <Compile Include="Controllers\CmsUser\PostsController.cs" />
     <Compile Include="Controllers\Public\PublicCategoriesController.cs" />
@@ -163,6 +165,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blog.Cloudinary\Blog.Cloudinary.csproj">
+      <Project>{9A6AE23D-F192-4CD4-9BA6-51C6371D0EF7}</Project>
+      <Name>Blog.Cloudinary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Blog.Server\Blog.Server.csproj">
       <Project>{DA66794D-9611-4004-A047-36ECA8D7ED63}</Project>
       <Name>Blog.Server</Name>

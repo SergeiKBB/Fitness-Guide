@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Http;
 using Blog.Server.Contracts.Requests.Users;
 using Blog.Server.Services.Abstractions;
@@ -9,7 +8,7 @@ using BlogAPI.Authorization.Payload;
 using BlogAPI.Models;
 using BlogAPI.Models.Login;
 
-namespace BlogAPI.Controllers
+namespace BlogAPI.Controllers.Public
 {
     [RoutePrefix("api/public/login")]
     public class PublicLoginController : ApiController

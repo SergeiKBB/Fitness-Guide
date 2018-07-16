@@ -2,6 +2,7 @@
 using System.Web.Http.Cors;
 using Autofac;
 using Autofac.Integration.WebApi;
+using Blog.Cloudinary;
 using Blog.Server;
 using BlogAPI.Modules;
 using log4net.Config;
@@ -30,6 +31,7 @@ namespace BlogAPI
 
             builder.RegisterModule<ServerModule>();
             builder.RegisterModule<ConfigurationModule>();
+            builder.RegisterModule<CloudinaryModule>();
             builder.RegisterModule<ApiModule>();
 
             var container = builder.Build();

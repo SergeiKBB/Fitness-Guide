@@ -14,6 +14,12 @@ namespace BlogAPI.Modules
 
             builder.RegisterInstance(new AccessTokenConfiguration(accessTokenConfigurationSection))
                 .AsImplementedInterfaces();
+
+            var cloudinaryConfigurationSection =
+                WebConfigurationManager.GetSection("CloudinaryConfiguration") as CloudinaryConfigurationSection;
+
+            builder.RegisterInstance(new CloudinaryConfiguration(cloudinaryConfigurationSection))
+                .AsImplementedInterfaces();
         }
     }
 }

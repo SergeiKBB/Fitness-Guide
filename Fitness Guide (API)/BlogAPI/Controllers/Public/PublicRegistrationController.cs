@@ -4,7 +4,7 @@ using Blog.Server.Contracts.Requests.Users;
 using Blog.Server.Services.Abstractions;
 using Blog.Server.Services.Abstractions.Hashing;
 
-namespace BlogAPI.Controllers
+namespace BlogAPI.Controllers.Public
 {
     [RoutePrefix("api/public/register")]
     public class PublicRegistrationController : ApiController
