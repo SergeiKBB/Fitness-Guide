@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Blog.Cloudinary.Contracts;
-using Blog.Cloudinary.Services;
 using Blog.Server.Contracts.Requests.Posts;
 using Blog.Server.Contracts.Responses.Posts;
 using Blog.Server.Services.Abstractions;

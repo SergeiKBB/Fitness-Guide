@@ -9,7 +9,6 @@ using Blog.Server.Database.Contexts;
 using Blog.Server.Database.Entities;
 using Blog.Server.Exceptions.Base;
 using Blog.Server.Repositories.Abstractions;
-using log4net.Util;
 
 namespace Blog.Server.Repositories.Implementations
 {
