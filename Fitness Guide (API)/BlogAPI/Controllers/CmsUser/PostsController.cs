@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Blog.Cloudinary.Contracts;
 using Blog.Server.Contracts.Requests.Posts;
-using Blog.Server.Contracts.Responses.Posts;
 using Blog.Server.Services.Abstractions;
 using BlogAPI.Authorization;
 using BlogAPI.Authorization.Payload;
@@ -29,13 +27,18 @@ namespace BlogAPI.Controllers.CmsUser
         [Route]
         public async Task CreatePost(CreatePostRequestModel model)
         {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
             var request = new CreatePostRequest
             {
                 AuthorId = UserId,
-                CategoriesIds = model?.CategoriesIds,
-                Description = model?.Description,
-                Title = model?.Title,
-                ImageId = model?.ImageId ?? Guid.Empty //it's bad :((
+                CategoriesIds = model.CategoriesIds,
+                Description = model.Description,
+                Title = model.Title,
+                ImageId = model.ImageId
             };
 
             await _postsManagementService.CreatePost(request);

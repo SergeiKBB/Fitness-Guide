@@ -1,8 +1,6 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Http;
 using Blog.Server.Contracts.Requests.Categories;
-using Blog.Server.Contracts.Responses.Categories;
 using Blog.Server.Services.Abstractions;
 using BlogAPI.Authorization;
 using BlogAPI.Authorization.Payload;
