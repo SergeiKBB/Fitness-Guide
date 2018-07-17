@@ -29,13 +29,18 @@ namespace BlogAPI.Controllers.CmsUser
         [Route]
         public async Task CreatePost(CreatePostRequestModel model)
         {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
             var request = new CreatePostRequest
             {
                 AuthorId = UserId,
-                CategoriesIds = model?.CategoriesIds,
-                Description = model?.Description,
-                Title = model?.Title,
-                ImageId = model?.ImageId ?? Guid.Empty //it's bad :((
+                CategoriesIds = model.CategoriesIds,
+                Description = model.Description,
+                Title = model.Title,
+                ImageId = model.ImageId
             };
 
             await _postsManagementService.CreatePost(request);

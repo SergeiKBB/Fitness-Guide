@@ -9,6 +9,7 @@ using Blog.Server.Database.Contexts;
 using Blog.Server.Database.Entities;
 using Blog.Server.Exceptions.Base;
 using Blog.Server.Repositories.Abstractions;
+using log4net.Util;
 
 namespace Blog.Server.Repositories.Implementations
 {
@@ -121,6 +122,7 @@ namespace Blog.Server.Repositories.Implementations
         public async Task<GetAllPostsResponse> GetAllPosts(GetAllPostsRequest request)
         {
             var posts = await DbContext.Posts
+                    .Include(p => p.Image)
                 .Where(p => !request.CategoriesIds.Any() ||
                             request.CategoriesIds.Intersect(p.Categories.Select(c => c.Id)).Any())
                 .Select(p => new GetAllPostsResponse.Post
@@ -131,8 +133,9 @@ namespace Blog.Server.Repositories.Implementations
                     ViewsCount = p.ViewsCount,
                     CreationDate = p.CreationDate,
                     UpdateDate = p.UpdateDate,
+                    ImageUrl = p.Image.Url
                 }).ToListAsync();
-
+            
             return new GetAllPostsResponse
             {
                 Posts = posts
