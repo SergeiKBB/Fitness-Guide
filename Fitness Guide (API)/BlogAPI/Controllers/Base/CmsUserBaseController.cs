@@ -13,19 +13,19 @@ using BlogAPI.Authorization.Payload;
 
 namespace BlogAPI.Controllers.Base
 {
-    public class CmsUserBaseController : ApiController
+    public abstract class CmsUserBaseController : ApiController
     {
         private readonly IAccessTokenService<CmsUserAccessTokenPayload> _accessTokenService;
         private readonly ICmsUserManagementService _cmsUserManagementService;
 
-        public CmsUserBaseController(IAccessTokenService<CmsUserAccessTokenPayload> accessTokenService,
+        protected CmsUserBaseController(IAccessTokenService<CmsUserAccessTokenPayload> accessTokenService,
             ICmsUserManagementService cmsUserManagementService)
         {
             _accessTokenService = accessTokenService;
             _cmsUserManagementService = cmsUserManagementService;
         }
 
-        public Guid UserId { get; set; }
+        protected Guid UserId { get; set; }
 
         public override async Task<HttpResponseMessage> ExecuteAsync(HttpControllerContext controllerContext,
             CancellationToken cancellationToken)

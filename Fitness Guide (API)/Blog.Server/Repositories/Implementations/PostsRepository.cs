@@ -66,7 +66,8 @@ namespace Blog.Server.Repositories.Implementations
 
         public async Task DeletePost(DeletePostRequest request)
         {
-            var post = await DbContext.Posts.FirstOrDefaultAsync(p => p.Id == request.Id);
+            var post = await DbContext.Posts.Include(p => p.Comments)
+                .FirstOrDefaultAsync(p => p.Id == request.Id);
 
             if (post == null)
             {
@@ -74,6 +75,11 @@ namespace Blog.Server.Repositories.Implementations
             }
 
             DbContext.Posts.Remove(post);
+
+            if (post.Comments != null && post.Comments.Any())
+            {
+                DbContext.RemoveRange(post.Comments);
+            }
 
             await DbContext.SaveChangesAsync();
         }
@@ -108,7 +114,22 @@ namespace Blog.Server.Repositories.Implementations
                                 Url = transform.Url,
                                 TransformName = transform.TransformName
                             }).ToList()
-                    }
+                    },
+                    Comments = post.Comments.Select(comment => new GetPostResponse.Comment
+                    {
+                        Id = comment.Id,
+                        Author = comment.AuthorId == null
+                            ? null
+                            : new GetPostResponse.User
+                            {
+                                Email = comment.Author.Email,
+                                FirstName = comment.Author.FirstName,
+                                LastName = comment.Author.LastName,
+                                UserId = comment.Author.Id
+                            },
+                        Content = comment.Content,
+                        Date = comment.CreationDate
+                    }).ToList()
                 })
                 .FirstOrDefaultAsync(p => p.Id == request.Id);
 
@@ -123,7 +144,6 @@ namespace Blog.Server.Repositories.Implementations
         public async Task<GetAllPostsResponse> GetAllPosts(GetAllPostsRequest request)
         {
             var posts = await DbContext.Posts
-                    .Include(p => p.Image)
                 .Where(p => !request.CategoriesIds.Any() ||
                             request.CategoriesIds.Intersect(p.Categories.Select(c => c.Id)).Any())
                 .Select(p => new GetAllPostsResponse.Post
@@ -134,13 +154,32 @@ namespace Blog.Server.Repositories.Implementations
                     ViewsCount = p.ViewsCount,
                     CreationDate = p.CreationDate,
                     UpdateDate = p.UpdateDate,
-                    ImageUrl = p.Image.Url
+                    ImageUrl = p.Image.Url,
+                    Categories = p.Categories.Select(category => new GetAllPostsResponse.Category
+                    {
+                        Id = category.Id,
+                        Name = category.Name
+                    }).ToList()
                 }).ToListAsync();
-            
+
             return new GetAllPostsResponse
             {
                 Posts = posts
             };
+        }
+
+        public async Task CommentPost(CommentPostRequest request)
+        {
+            var comment = new Comment
+            {
+                AuthorId = request.AuthorId,
+                Content = request.Content,
+                PostId = request.PostId
+            };
+
+            DbContext.Comments.Add(comment);
+
+            await DbContext.SaveChangesAsync();
         }
     }
 }

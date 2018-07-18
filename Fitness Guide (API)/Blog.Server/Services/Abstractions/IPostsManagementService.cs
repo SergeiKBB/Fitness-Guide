@@ -12,5 +12,6 @@ namespace Blog.Server.Services.Abstractions
         Task DeletePost(DeletePostRequest request);
         Task<GetPostResponse> GetPostById(GetPostByIdRequest request);
         Task<GetAllPostsResponse> GetAllPosts(GetAllPostsRequest request);
+        Task CommentPost(CommentPostRequest request);
     }
 }

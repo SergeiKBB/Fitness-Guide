@@ -4,6 +4,7 @@ using System.Web.Http;
 using Blog.Server.Contracts.Requests.Posts;
 using Blog.Server.Contracts.Responses.Posts;
 using Blog.Server.Services.Abstractions;
+using BlogAPI.Models.Posts;
 
 namespace BlogAPI.Controllers.Public
 {
@@ -16,7 +17,18 @@ namespace BlogAPI.Controllers.Public
         {
             _postsManagementService = postsManagementService;
         }
+        [HttpPost]
+        [Route("comment")]
+        public async Task CommentPost(AddCommentModel model)
+        {
+            var commentPostRequest = new CommentPostRequest
+            {
+                Content = model.Content,
+                PostId = model.PostId
+            };
 
+            await _postsManagementService.CommentPost(commentPostRequest);
+        }
 
         [HttpGet]
         [Route]

@@ -16,6 +16,13 @@ namespace Blog.Server.Contracts.Responses.Posts
             public DateTime CreationDate { get; set; }
             public DateTime UpdateDate { get; set; }
             public string ImageUrl { get; set; }
+            public ICollection<Category> Categories { get; set; }
+        }
+
+        public class Category
+        {
+            public Guid Id { get; set; }
+            public string Name { get; set; }
         }
     }
 }

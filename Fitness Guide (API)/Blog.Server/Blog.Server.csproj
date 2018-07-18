@@ -85,6 +85,7 @@
     <Compile Include="Contracts\Requests\CmsUsers\UpdateCmsUserRefreshTokenRequest.cs" />
     <Compile Include="Contracts\Requests\Images\CreateImageRequest.cs" />
     <Compile Include="Contracts\Requests\Images\GetImagesRequest.cs" />
+    <Compile Include="Contracts\Requests\Posts\CommentPostRequest.cs" />
     <Compile Include="Contracts\Requests\Posts\CreatePostRequest.cs" />
     <Compile Include="Contracts\Requests\Posts\DeletePostRequest.cs" />
     <Compile Include="Contracts\Requests\Posts\GetAllPostsRequest.cs" />

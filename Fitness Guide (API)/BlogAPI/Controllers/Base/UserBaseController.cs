@@ -13,24 +13,24 @@ using BlogAPI.Authorization.Payload;
 
 namespace BlogAPI.Controllers.Base
 {
-    public class UserBaseController : ApiController
+    public abstract class UserBaseController : ApiController
     {
         private readonly IAccessTokenService<UserAccessTokenPayload> _accessTokenService;
         private readonly IUserManagementService _userManagementService;
 
-        public UserBaseController(IAccessTokenService<UserAccessTokenPayload> accessTokenService,
+        protected UserBaseController(IAccessTokenService<UserAccessTokenPayload> accessTokenService,
             IUserManagementService userManagementService)
         {
             _accessTokenService = accessTokenService;
             _userManagementService = userManagementService;
         }
 
-        public Guid UserId { get; set; }
+        protected Guid UserId { get; set; }
 
         public override async Task<HttpResponseMessage> ExecuteAsync(HttpControllerContext controllerContext,
             CancellationToken cancellationToken)
         {
-            if (!Request.Headers.TryGetValues("AccessToken", out var tokens))
+            if (!controllerContext.Request.Headers.TryGetValues("Authorization", out var tokens))
             {
                 throw new MissedAccessTokenException();
             }

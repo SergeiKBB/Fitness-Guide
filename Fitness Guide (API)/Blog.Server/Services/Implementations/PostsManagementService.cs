@@ -48,5 +48,10 @@ namespace Blog.Server.Services.Implementations
 
             return posts;
         }
+
+        public async Task CommentPost(CommentPostRequest request)
+        {
+            await ProcessRequest(request, _postsRepository.CommentPost);
+        }
     }
 }
