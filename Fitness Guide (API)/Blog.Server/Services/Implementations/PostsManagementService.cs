@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Autofac;
 using Blog.Server.Contracts.Requests.Posts;
 using Blog.Server.Contracts.Responses.Posts;
@@ -17,9 +18,11 @@ namespace Blog.Server.Services.Implementations
             _postsRepository = postsRepository;
         }
 
-        public async Task CreatePost(CreatePostRequest request)
+        public async Task<Guid> CreatePost(CreatePostRequest request)
         {
-            await ProcessRequest(request, _postsRepository.CreatePost);
+            var postId = await ProcessRequest(request, _postsRepository.CreatePost);
+
+            return postId;
         }
 
         public async Task UpdatePost(UpdatePostRequest request)

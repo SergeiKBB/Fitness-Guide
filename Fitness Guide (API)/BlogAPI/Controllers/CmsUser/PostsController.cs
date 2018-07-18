@@ -25,7 +25,7 @@ namespace BlogAPI.Controllers.CmsUser
 
         [HttpPost]
         [Route]
-        public async Task CreatePost(CreatePostRequestModel model)
+        public async Task<Guid> CreatePost(CreatePostRequestModel model)
         {
             if (model == null)
             {
@@ -41,7 +41,9 @@ namespace BlogAPI.Controllers.CmsUser
                 ImageId = model.ImageId
             };
 
-            await _postsManagementService.CreatePost(request);
+            var postId = await _postsManagementService.CreatePost(request);
+
+            return postId;
         }
 
         [HttpPut]

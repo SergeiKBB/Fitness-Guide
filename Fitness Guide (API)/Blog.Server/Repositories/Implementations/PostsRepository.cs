@@ -18,7 +18,7 @@ namespace Blog.Server.Repositories.Implementations
         {
         }
 
-        public async Task CreatePost(CreatePostRequest request)
+        public async Task<Guid> CreatePost(CreatePostRequest request)
         {
             var requestCategoriesIds = request.CategoriesIds ?? new List<Guid>();
 
@@ -37,6 +37,8 @@ namespace Blog.Server.Repositories.Implementations
             DbContext.Posts.Add(post);
 
             await DbContext.SaveChangesAsync();
+
+            return post.Id;
         }
 
         public async Task UpdatePost(UpdatePostRequest request)
