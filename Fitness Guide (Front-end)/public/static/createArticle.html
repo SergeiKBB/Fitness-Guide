@@ -87,7 +87,7 @@
                             <label for="category" class="form__label col-l-2 col-m-4">Category:</label>
                             <select class="form__select col-l-6 col-m-10 select-category" name="category">
                             </select>
-                            <button type="button" class="btn btn__new-category">New category</button>
+                            <button type="button" class="btn btn__new-category" id="newCategory">New category</button>
                         </div>
                         <div class="form__item">
                             <label for="img" class="form__label col-l-2  col-m-6">Upload img:</label>
@@ -198,9 +198,10 @@
         </div>
     </div>
 
-    <div class="modal-wrap">
+    <div class="modal-wrap modal__category">
         <div class="modal">
-            <form action="" method="POST">
+                <button class="modal__close close__category"></button>
+            <form action="" method="POST" class="form__new-category">
                 <label for="newCategory">Name:</label>
                 <input type="text" name="newCategory" id="newCategory">
                 <button type="button" class="btn btn__add-category">Add</button>

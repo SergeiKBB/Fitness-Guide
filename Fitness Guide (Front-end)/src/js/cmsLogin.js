@@ -1,7 +1,6 @@
 (function () {
     var loginForm = document.getElementById("cmsLoginForm");
     var closeBtn = document.querySelector(".modal__close");
-    console.log(loginForm);
     var loginUrl = "http://localhost:50536/api/public/cms-login";
 
     if (loginForm) {

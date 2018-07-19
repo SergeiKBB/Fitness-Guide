@@ -12,7 +12,6 @@ function Model() {
     };
 
     Model.prototype.addItem = function (item) {
-        console.log(item);
         return addImage(item);
     };
 

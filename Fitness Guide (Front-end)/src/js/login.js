@@ -140,9 +140,9 @@
             var createArticle = _createElement("a", { href: "createArticle.html", class: "user-nav__link" }, "", '<span class="user-nav__icon icon-add"></span><span class="user-nav__text">Article</span>');
             loginLink.parentElement.appendChild(createArticle);
             loginLinkText.innerHTML = getCookie("name");
-        } else {
+        } else if(getCookie("email")) {
             var loginLinkText = document.querySelector(".user-nav__text");
-            loginLinkText.innerHTML = getCookie("email")
+            loginLinkText.innerHTML = getCookie("email");
         }
 
         function setCookie(cname, cvalue, exdays) {

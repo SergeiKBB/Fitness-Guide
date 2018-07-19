@@ -14,6 +14,7 @@ function Controller(model, view) {
 
     Controller.prototype.addArticle = function(data) {
         var result = this.model.addItem(data.file);
+        console.log(result);
         this.view.addItem(data, result);
     };
 

@@ -107,80 +107,80 @@
     }
 
     function create(father, size, arrItems) {
-        var number = 12 / size;
+        var number = 9 / size;
         for (var i = 0; i < number; i++) {
             if (i == 0) {
                 father.appendChild(createWrap(arrItems.slice(i, i + size), true));
             } else {
-                father.appendChild(createWrap(arrItems.slice(i, i + size)));
+                father.appendChild(createWrap(arrItems.slice(i * size, (i *size)+3)));
             }
         }
     }
 
 
     var obj1 = {
-        img: "img/running2.jpg",
+        img: "img/running.jpg",
         category: "running",
         title: "Lorem ipsum "
     }
     var obj2 = {
-        img: "img/swimming2.jpg",
+        img: "img/swimming.jpg",
         category: "swimming",
         title: "Lorem ipsum "
     }
     var obj3 = {
-        img: "img/crossfit2.jpg",
+        img: "img/crossfit.jpg",
         category: "crossfit",
         title: "Lorem ipsum "
     }
     var obj4 = {
         img: "img/running2.jpg",
         category: "running",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum ."
     }
     var obj5 = {
         img: "img/swimming2.jpg",
         category: "swimming",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum "
     }
     var obj6 = {
         img: "img/crossfit2.jpg",
         category: "crossfit",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum "
     }
     var obj7 = {
-        img: "img/running2.jpg",
+        img: "img/running3.jpg",
         category: "running",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum "
     }
     var obj8 = {
-        img: "img/swimming2.jpg",
+        img: "img/swimming3.jpg",
         category: "swimming",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum "
     }
     var obj9 = {
-        img: "img/crossfit2.jpg",
+        img: "img/crossfit3.jpg",
         category: "crossfit",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum "
     }
-    var obj10 = {
-        img: "img/running2.jpg",
-        category: "running",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
-    }
-    var obj11 = {
-        img: "img/swimming2.jpg",
-        category: "swimming",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
-    }
-    var obj12 = {
-        img: "img/crossfit2.jpg",
-        category: "crossfit",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
-    }
+    // var obj10 = {
+    //     img: "img/running.jpg",
+    //     category: "mma",
+    //     title: "Lorem ipsum "
+    // }
+    // var obj11 = {
+    //     img: "img/running4.jpg",
+    //     category: "running",
+    //     title: "Lorem ipsum "
+    // }
+    // var obj12 = {
+    //     img: "img/swimming4.jpg",
+    //     category: "swimming",
+    //     title: "Lorem ipsum"
+    // }
 
 
-    var allItems = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12];
+    var allItems = [obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9];
 
     var father = window.document.getElementById("carousel__inner");
     if (father) {

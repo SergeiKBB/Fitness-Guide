@@ -21,6 +21,16 @@ var token = localStorage.getItem("token");
         return request;
     }
 
+    function addCategory(name) {
+        name = {"Name" : name};
+        var request = new XMLHttpRequest();
+        request.open("POST", "http://localhost:50536/api/cms/categories");
+        request.setRequestHeader("Content-Type", "application/json");
+        request.setRequestHeader("Authorization", token);
+        request.send(JSON.stringify(name));
+        return request;
+    }
+
     function editRequest(dataObj) {
         var request = new XMLHttpRequest();
         request.open("PUT", "http://localhost:50536/api/cms/posts");
@@ -161,12 +171,12 @@ var token = localStorage.getItem("token");
             this.elements.category.classList.remove("error");
         }
 
-        if (!this.file) {
-            this.elements.file.classList.add("error");
-            this.result = false;
-        } else {
-            this.elements.file.classList.remove("error");
-        }
+        // if (!this.file) {
+        //     this.elements.file.classList.add("error");
+        //     this.result = false;
+        // } else {
+        //     this.elements.file.classList.remove("error");
+        // }
 
         if (!this.text) {
             this.elements.text.classList.add("error");
@@ -197,6 +207,7 @@ var token = localStorage.getItem("token");
 
     window.addRequest = addRequest;
     window.addImage = addImage;
+    window.addCategory =addCategory;
     window.editRequest = editRequest;
     window.removeRequest = removeRequest;
     window.getArticle = getArticle;

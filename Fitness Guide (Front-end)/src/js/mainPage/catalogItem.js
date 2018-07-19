@@ -2,7 +2,7 @@
 
     function createItem(data) {
         console.log(data);
-        data.category = {id:"393053dd-3388-e811-809c-e03f49c25dda", name: "Running"};
+        data.category = {id:data.Categories[0].Id, name: data.Categories[0].Name};
 
         var views = _createElement("span", {class: "secondary__views"}, "", ""+data.ViewsCount);
         var time = _createElement("time", {class: "secondary__date", pubdate: "", datetime: formatDate(data.CreationDate) }, "", formatDate(data.CreationDate));

@@ -66,16 +66,16 @@ function View() {
 
             context.showAllArticles();
         };
-
+        console.log(request);
         if (request) {
             request.onreadystatechange = function () {
 
-
+                console.log("123");
                 if (this.status == 200 && this.readyState == 4) {
                     var imageId = JSON.parse(this.responseText)["ImageId"];
                     data.imageId = imageId;
                     addRequest(data).onreadystatechange = function () {
-                        if (this.status == 204 && this.readyState == 4) {
+                        if (this.status == 200 && this.readyState == 4) {
                             showMessage("Article successfully created!");
                             displayAllArticles();
                         } else if (this.status == 400 && this.readyState == 4) {
@@ -245,12 +245,11 @@ function View() {
             var file = e.target.file;
             var text = e.target.text;
 
-            console.log(e.target);
             var data = new FormData();
             data.append("title", title.value);
             data.append("categoriesIds", category.value);
-            data.append("img", file.files[0]);
-            data.append("text", text.value);
+            data.append("ImageId", file.files[0]);
+            data.append("Description", text.value);
             data.append("id", id);
 
             var validation = new ValidationArticle({
