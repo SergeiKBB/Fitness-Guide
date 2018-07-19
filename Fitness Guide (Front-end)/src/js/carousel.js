@@ -121,17 +121,17 @@
     var obj1 = {
         img: "img/running2.jpg",
         category: "running",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum "
     }
     var obj2 = {
         img: "img/swimming2.jpg",
         category: "swimming",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum "
     }
     var obj3 = {
         img: "img/crossfit2.jpg",
         category: "crossfit",
-        title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        title: "Lorem ipsum "
     }
     var obj4 = {
         img: "img/running2.jpg",

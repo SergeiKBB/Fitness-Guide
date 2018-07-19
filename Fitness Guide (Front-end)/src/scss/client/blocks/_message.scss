@@ -1,0 +1,16 @@
+.message {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 25px 50px;
+
+    transform: translate(-50%,0);
+    transition: 2s;
+    font-size: rem(24);
+    background-color: $color-green;
+}

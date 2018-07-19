@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness Guide</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <style>
+        .modal-wrap {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="modal-wrap">
+        <div class="modal modal__login col-l-4 col-t-6 col-m-11">
+            <button class="modal__close"></button>
+            <div class="tab__content">
+                <div class="tab__login tab-active" id="tabLoginContent">
+                    <form action="" method="POST" class="tab__form" id="cmsLoginForm">
+                        <div class="tab__input-wrap">
+                            <input type="email" id="email" class="tab__input" name="email" placeholder="Email Address">
+                            <label for="email" class="tab__label">Email address</label>
+                        </div>
+                        <div class="tab__input-wrap">
+                            <input type="password" id="password" class="tab__input" name="password" placeholder="Password">
+                            <label for="password" class="tab__label">Password</label>
+                        </div>
+                        <a href="" class="tab__link">Forgot Password?</a>
+                        <button class="btn tab__btn_login" id="loginSubmit" type="submit">Log in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

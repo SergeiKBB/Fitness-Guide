@@ -19,7 +19,8 @@
     &__title {
         display: flex;
         width: auto;
-        align-items: center;
+        min-height: 55px;
+        align-items: flex-start;
         margin: 0;
         margin-bottom: 5px;
 
@@ -51,6 +52,23 @@
             padding: 4px 10px;
             border-radius: 5px;
             margin: 10px 0 0 10px;
+        }
+    }
+
+    &__new-category {
+        height: auto;
+        width: auto;
+        margin-left: 15px;
+        text-decoration: underline;
+
+        color: $color-gray;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:active {
+            opacity: 0.3;
         }
     }
 }

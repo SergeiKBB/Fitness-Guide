@@ -2,7 +2,7 @@
     &__item {
         display: flex;
         position: relative;
-        height: 350px;
+        height: 400px;
         margin-bottom: 30px;
         padding: 0 10px;
         align-items: flex-end;
@@ -18,6 +18,8 @@
     }
 
     &__wrap {
+        height: 50%;
+        width: 100%;
         padding: 0 20px 10px;
         background-color: rgba($color-gray, 0.6);
     }
@@ -25,12 +27,12 @@
     &__title {
         display: inline-block;
         width: 100%;
-        margin: 10px 0;
+        margin: 8px 0 0;
         
         text-align: center;
         text-transform: uppercase;
         font-family: $default-font-bold;
-        font-size: rem(24);
+        font-size: rem(20);
         color: $color-white;
 
         &:hover {
@@ -43,7 +45,7 @@
     }
 
     &__preview {
-        max-height: 65px;
+        height: 50%;
         margin: 5px 0;
         overflow: hidden;
         text-align: justify;
@@ -52,10 +54,12 @@
 
     &__category {
         display: inline-block;
-        padding: 5px 20px 5px 10px;
+        padding: 7px 20px 7px 10px;
 
         border-radius: 6px;
+        font-size: rem(13);
         color: $color-white;
+        line-height: rem(16);
         font-family: $default-font-bold;
         text-transform: uppercase;
 
